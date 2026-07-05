@@ -1,0 +1,159 @@
+"use client";
+
+import { GraduationCap, MapPin, Phone, Mail, Facebook, Youtube, Linkedin, ArrowRight, Send } from "lucide-react";
+import { SITE, NAV, useUI } from "@/lib/store";
+
+const DEPT_LINKS = [
+  "Computer Engineering",
+  "Civil Engineering",
+  "Electrical Engineering",
+  "Mechanical Engineering",
+  "Architecture Engineering",
+];
+
+const QUICK = [
+  "Notice Board",
+  "Class Routine",
+  "Result Checker",
+  "E-Class Portal",
+  "Smart Support",
+];
+
+export function Footer() {
+  const openAdmission = useUI((s) => s.openAdmission);
+  return (
+    <footer className="relative bg-brand-deep text-white overflow-hidden mt-auto">
+      <div className="absolute inset-0 bg-grid opacity-10" />
+      <div className="absolute -top-24 right-10 h-60 w-60 rounded-full bg-gold/10 blur-3xl" />
+
+      {/* Newsletter strip */}
+      <div className="relative border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 className="font-serif font-bold text-2xl">Subscribe to our newsletter</h3>
+            <p className="text-white/70 text-sm mt-1">Get admission updates, notices and news straight to your inbox.</p>
+          </div>
+          <form onSubmit={(e) => e.preventDefault()} className="flex w-full md:w-auto gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full md:w-72 rounded-lg bg-white/10 border border-white/20 px-4 py-2.5 text-sm text-white placeholder:text-white/50 outline-none focus:ring-2 focus:ring-gold/40"
+            />
+            <button className="shrink-0 inline-flex items-center gap-2 rounded-lg bg-gold hover:bg-amber-500 text-white px-4 py-2.5 text-sm font-semibold transition-colors">
+              <Send className="h-4 w-4" /> Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      {/* Main footer */}
+      <div className="relative mx-auto max-w-7xl px-4 py-14">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-3">
+              <div className="grid place-items-center h-12 w-12 rounded-xl bg-white/10 ring-1 ring-white/15">
+                <GraduationCap className="h-7 w-7 text-amber-300" />
+              </div>
+              <div>
+                <div className="font-serif font-bold text-lg">NPI Manikganj</div>
+                <div className="text-[11px] uppercase tracking-wider text-white/50">National Polytechnic Institute</div>
+              </div>
+            </div>
+            <p className="mt-4 text-sm text-white/70 leading-relaxed">
+              A modern polytechnic institute dedicated to technical & engineering education — building skilled professionals for Bangladesh's future.
+            </p>
+            <div className="mt-5 flex items-center gap-3">
+              {[Facebook, Youtube, Linkedin].map((Icon, i) => (
+                <a key={i} href="#" aria-label="Social link" className="grid place-items-center h-9 w-9 rounded-lg bg-white/8 hover:bg-gold text-white hover:text-white transition-colors">
+                  <Icon className="h-4.5 w-4.5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick links */}
+          <FooterCol title="Explore">
+            <ul className="space-y-2.5">
+              {NAV.map((n) => (
+                <li key={n.href}>
+                  <a href={n.href} className="group inline-flex items-center gap-1.5 text-sm text-white/70 hover:text-amber-300 transition-colors">
+                    <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    {n.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </FooterCol>
+
+          {/* Departments */}
+          <FooterCol title="Departments">
+            <ul className="space-y-2.5">
+              {DEPT_LINKS.map((d) => (
+                <li key={d}>
+                  <a href="#departments" className="group inline-flex items-center gap-1.5 text-sm text-white/70 hover:text-amber-300 transition-colors">
+                    <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    {d}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a href="#departments" className="text-sm text-amber-300 hover:underline">+ 3 more departments</a>
+              </li>
+            </ul>
+          </FooterCol>
+
+          {/* Contact */}
+          <FooterCol title="Contact Us">
+            <ul className="space-y-3.5 text-sm">
+              <li className="flex gap-2.5">
+                <MapPin className="h-4.5 w-4.5 text-amber-300 shrink-0 mt-0.5" />
+                <span className="text-white/70">{SITE.address}</span>
+              </li>
+              <li>
+                <a href={`tel:${SITE.phone1}`} className="flex gap-2.5 text-white/70 hover:text-amber-300 transition-colors">
+                  <Phone className="h-4.5 w-4.5 text-amber-300 shrink-0 mt-0.5" />
+                  <span>{SITE.phone1}<br />{SITE.phone2}</span>
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${SITE.email}`} className="flex gap-2.5 text-white/70 hover:text-amber-300 transition-colors">
+                  <Mail className="h-4.5 w-4.5 text-amber-300 shrink-0 mt-0.5" />
+                  <span>{SITE.email}</span>
+                </a>
+              </li>
+            </ul>
+            <button
+              onClick={() => openAdmission()}
+              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-gold hover:bg-amber-500 text-white px-4 py-2 text-sm font-semibold transition-colors"
+            >
+              Apply for Admission
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </FooterCol>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="relative border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
+          <p>© {new Date().getFullYear()} NPI Manikganj — National Polytechnic Institute. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <a href="#" className="hover:text-amber-300 transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-amber-300 transition-colors">Terms of Service</a>
+            <a href="#home" className="hover:text-amber-300 transition-colors">Back to Top ↑</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function FooterCol({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <h4 className="font-serif font-bold text-base mb-4 text-white">{title}</h4>
+      {children}
+    </div>
+  );
+}

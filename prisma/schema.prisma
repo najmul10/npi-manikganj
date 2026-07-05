@@ -1,0 +1,108 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Department {
+  id              String   @id @default(cuid())
+  slug            String   @unique
+  name            String
+  nameBn          String
+  shortName       String
+  icon            String
+  image           String
+  tagline         String
+  description     String
+  duration        String
+  seats           Int
+  establishedYear Int
+  careerOptions   String
+  highlights      String
+  order           Int      @default(0)
+  createdAt       DateTime @default(now())
+}
+
+model Teacher {
+  id          String   @id @default(cuid())
+  name        String
+  designation String
+  department  String
+  email       String
+  phone       String
+  image       String
+  bio         String
+  expertise   String
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+}
+
+model Notice {
+  id        String   @id @default(cuid())
+  title     String
+  category  String
+  date      DateTime
+  isPinned  Boolean  @default(false)
+  excerpt   String
+  body      String
+  createdAt DateTime @default(now())
+}
+
+model Result {
+  id          String   @id @default(cuid())
+  rollNo      String   @unique
+  studentName String
+  department  String
+  semester    String
+  gpa         Float
+  status      String
+  year        String
+  createdAt   DateTime @default(now())
+}
+
+model Application {
+  id         String   @id @default(cuid())
+  name       String
+  email      String
+  phone      String
+  sscGpa     Float
+  department String
+  message    String
+  createdAt  DateTime @default(now())
+}
+
+model Feedback {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  rating    Int
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model GalleryItem {
+  id        String   @id @default(cuid())
+  title     String
+  image     String
+  category  String
+  createdAt DateTime @default(now())
+}
+
+model Blog {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  excerpt   String
+  content   String
+  image     String
+  author    String
+  category  String
+  date      DateTime
+  createdAt DateTime @default(now())
+}

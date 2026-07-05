@@ -1,0 +1,133 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, ChevronLeft, ChevronRight, Images } from "lucide-react";
+import { SectionHeading } from "./section-heading";
+import { useFetch } from "@/hooks/use-fetch";
+import { cn } from "@/lib/utils";
+
+interface GalleryItem {
+  id: string;
+  title: string;
+  image: string;
+  category: string;
+}
+
+const CATS = ["All", "Campus", "Labs", "Events"];
+
+export function Gallery() {
+  const { data, loading } = useFetch<GalleryItem[]>("/api/gallery");
+  const [cat, setCat] = useState("All");
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
+  const items = useMemo(() => {
+    if (!data) return [];
+    return cat === "All" ? data : data.filter((g) => g.category === cat);
+  }, [data, cat]);
+
+  const close = () => setLightbox(null);
+  const nav = (dir: number) =>
+    setLightbox((p) => (p === null ? p : (p + dir + items.length) % items.length));
+
+  return (
+    <section id="gallery" className="relative py-20 sm:py-28 bg-background">
+      <div className="mx-auto max-w-7xl px-4">
+        <SectionHeading
+          eyebrow="Campus Gallery"
+          title={<>Life at <span className="text-brand">NPI Manikganj</span></>}
+          subtitle="A glimpse into our campus, labs, workshops and the vibrant moments that make student life memorable."
+        />
+
+        <div className="mt-8 flex justify-center gap-2">
+          {CATS.map((c) => (
+            <button
+              key={c}
+              onClick={() => setCat(c)}
+              className={cn(
+                "px-4 py-1.5 rounded-full text-sm font-semibold transition-colors",
+                cat === c ? "bg-brand text-white" : "bg-secondary text-foreground/70 hover:bg-brand/10 hover:text-brand"
+              )}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+          {loading
+            ? Array.from({ length: 8 }).map((_, i) => (
+                <div key={i} className={cn("rounded-2xl bg-muted animate-pulse", i % 5 === 0 ? "row-span-2 h-full min-h-[16rem]" : "aspect-square")} />
+              ))
+            : items.map((g, idx) => (
+                <motion.button
+                  key={g.id}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ delay: (idx % 4) * 0.05 }}
+                  onClick={() => setLightbox(idx)}
+                  className={cn(
+                    "group relative rounded-2xl overflow-hidden ring-1 ring-border hover:ring-brand/40 transition-all",
+                    idx % 7 === 0 ? "row-span-2 aspect-square md:aspect-auto md:h-full" : "aspect-square"
+                  )}
+                >
+                  <img
+                    src={g.image}
+                    alt={g.title}
+                    className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-left">
+                    <span className="inline-block text-[10px] uppercase tracking-wide font-bold text-amber-300 bg-black/30 px-2 py-0.5 rounded backdrop-blur-sm">
+                      {g.category}
+                    </span>
+                    <h4 className="mt-1.5 text-white font-semibold text-sm leading-tight line-clamp-2">{g.title}</h4>
+                  </div>
+                  <div className="absolute top-3 right-3 grid place-items-center h-8 w-8 rounded-full bg-white/15 backdrop-blur-sm text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Images className="h-4 w-4" />
+                  </div>
+                </motion.button>
+              ))}
+        </div>
+      </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightbox !== null && items[lightbox] && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[70] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+            onClick={close}
+          >
+            <button onClick={close} className="absolute top-5 right-5 h-10 w-10 rounded-full bg-white/10 text-white grid place-items-center hover:bg-white/20" aria-label="Close">
+              <X className="h-5 w-5" />
+            </button>
+            <button onClick={(e) => { e.stopPropagation(); nav(-1); }} className="absolute left-4 sm:left-8 h-11 w-11 rounded-full bg-white/10 text-white grid place-items-center hover:bg-white/20" aria-label="Previous">
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button onClick={(e) => { e.stopPropagation(); nav(1); }} className="absolute right-4 sm:right-8 h-11 w-11 rounded-full bg-white/10 text-white grid place-items-center hover:bg-white/20" aria-label="Next">
+              <ChevronRight className="h-6 w-6" />
+            </button>
+            <motion.figure
+              key={lightbox}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              onClick={(e) => e.stopPropagation()}
+              className="max-w-4xl w-full"
+            >
+              <img src={items[lightbox].image} alt={items[lightbox].title} className="w-full max-h-[80vh] object-contain rounded-lg" />
+              <figcaption className="mt-4 text-center text-white">
+                <span className="text-xs uppercase tracking-wide text-amber-300">{items[lightbox].category}</span>
+                <h4 className="font-serif font-semibold text-lg">{items[lightbox].title}</h4>
+                <p className="text-white/50 text-sm">{lightbox + 1} / {items.length}</p>
+              </figcaption>
+            </motion.figure>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+}
