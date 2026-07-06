@@ -77,7 +77,7 @@ const departments = [
     nameBn: "ফুড ইঞ্জিনিয়ারিং",
     shortName: "FOOD",
     icon: "Wheat",
-    image: "https://sfile.chatglm.cn/images-ppt/bf34a13fe975.jpg",
+    image: "https://sfile.chatglm.cn/images-ppt/668586bf1bb1.jpg",
     tagline: "Engineer safe, nutritious food for millions.",
     description:
       "Food Engineering applies engineering principles to the storage, processing and distribution of food materials. The department covers food chemistry, microbiology, preservation, packaging, quality assurance and food plant management — preparing graduates for Bangladesh's growing agro-processing and food industry.",
