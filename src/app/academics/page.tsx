@@ -1,9 +1,15 @@
-"use client";
-
+import type { Metadata } from "next";
 import { SiteShell } from "@/components/site/site-shell";
 import { PageHeader } from "@/components/site/page-header";
 import { Academics } from "@/components/site/academics";
 import { BlogSection } from "@/components/site/blog";
+
+export const metadata: Metadata = {
+  title: "Academics — Notices, Results & Smart Support",
+  description:
+    "Stay updated with the latest notices, check your exam results online, and access student services — class routines, office applications, e-class portal and more at NPI Manikganj.",
+  alternates: { canonical: "/academics" },
+};
 
 export default function AcademicsPage() {
   return (

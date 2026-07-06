@@ -1,8 +1,14 @@
-"use client";
-
+import type { Metadata } from "next";
 import { SiteShell } from "@/components/site/site-shell";
 import { PageHeader } from "@/components/site/page-header";
 import { LegalContent } from "@/components/site/legal-content";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Privacy Policy of National Polytechnic Institute Manikganj (NPI). Learn how we collect, use and protect your personal information.",
+  alternates: { canonical: "/privacy-policy" },
+};
 
 const intro =
   "At National Polytechnic Institute Manikganj (NPI), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, store and protect your data when you visit our website or use our online services. By using this website, you agree to the practices described in this policy.";

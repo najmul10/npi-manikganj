@@ -1,8 +1,14 @@
-"use client";
-
+import type { Metadata } from "next";
 import { SiteShell } from "@/components/site/site-shell";
 import { PageHeader } from "@/components/site/page-header";
 import { Contact } from "@/components/site/contact";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with NPI Manikganj. Visit our campus at Narangai, Manikganj Sadar, call the admission hotline 01735782829, or leave your feedback online.",
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   return (

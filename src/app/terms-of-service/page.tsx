@@ -1,8 +1,14 @@
-"use client";
-
+import type { Metadata } from "next";
 import { SiteShell } from "@/components/site/site-shell";
 import { PageHeader } from "@/components/site/page-header";
 import { LegalContent } from "@/components/site/legal-content";
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description:
+    "Terms of Service for the National Polytechnic Institute Manikganj (NPI) website. Rules and guidelines for using our online services.",
+  alternates: { canonical: "/terms-of-service" },
+};
 
 const intro =
   "Welcome to the National Polytechnic Institute Manikganj (NPI) website. By accessing and using this website, you agree to comply with and be bound by the following Terms of Service. Please read these terms carefully before using our services. If you do not agree with any part of these terms, please do not use this website.";
