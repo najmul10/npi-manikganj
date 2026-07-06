@@ -145,8 +145,8 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/80">
           <p>© {SITE.est}–{new Date().getFullYear()} NPI Manikganj — National Polytechnic Institute. All rights reserved.</p>
           <div className="flex items-center gap-4 flex-wrap justify-center">
-            <Link href="/contact" className="hover:text-amber-300 transition-colors">Privacy Policy</Link>
-            <Link href="/contact" className="hover:text-amber-300 transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-amber-300 transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-amber-300 transition-colors">Terms of Service</Link>
             <Link href="/" className="hover:text-amber-300 transition-colors">Back to Top ↑</Link>
           </div>
         </div>
