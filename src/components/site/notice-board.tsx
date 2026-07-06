@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Pin, FileText, ChevronRight, Calendar, Megaphone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -33,6 +33,18 @@ export function NoticeBoard() {
   const { data, loading } = useFetch<Notice[]>("/api/notices");
   const [cat, setCat] = useState("All");
   const [active, setActive] = useState<Notice | null>(null);
+  const tabsRef = useRef<HTMLDivElement>(null);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const checkScroll = () => {
+    const el = tabsRef.current;
+    if (!el) return;
+    setCanScrollRight(el.scrollWidth - el.scrollLeft - el.clientWidth > 4);
+  };
+
+  useEffect(() => {
+    queueMicrotask(checkScroll);
+  }, []);
 
   const filtered = useMemo(() => {
     if (!data) return [];
@@ -52,21 +64,31 @@ export function NoticeBoard() {
       </div>
 
       {/* Category tabs */}
-      <div className="flex gap-1.5 sm:gap-2 px-3 sm:px-5 py-3 border-b border-border overflow-x-auto no-scrollbar">
-        {CATS.map((c) => (
-          <button
-            key={c}
-            onClick={() => setCat(c)}
-            className={cn(
-              "shrink-0 px-2.5 sm:px-3 py-1.5 rounded-full text-xs font-semibold transition-colors",
-              cat === c
-                ? "bg-brand text-white"
-                : "bg-secondary text-foreground/70 hover:bg-brand/10 hover:text-brand"
-            )}
-          >
-            {c}
-          </button>
-        ))}
+      <div className="relative border-b border-border">
+        <div
+          ref={tabsRef}
+          onScroll={checkScroll}
+          onLoad={checkScroll}
+          className="flex gap-1.5 sm:gap-2 px-3 sm:px-5 py-3 overflow-x-auto no-scrollbar"
+        >
+          {CATS.map((c) => (
+            <button
+              key={c}
+              onClick={() => setCat(c)}
+              className={cn(
+                "shrink-0 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors",
+                cat === c
+                  ? "bg-brand text-white"
+                  : "bg-secondary text-foreground/70 hover:bg-brand/10 hover:text-brand"
+              )}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+        {canScrollRight && (
+          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-card to-transparent pointer-events-none" />
+        )}
       </div>
 
       {/* List */}
