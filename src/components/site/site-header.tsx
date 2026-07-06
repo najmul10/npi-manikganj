@@ -98,7 +98,7 @@ export function SiteHeader() {
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[340px] p-0">
+              <SheetContent side="right" showCloseButton={false} className="w-[300px] sm:w-[340px] p-0">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <div className="flex items-center justify-between p-4 border-b bg-brand-deep">
                   <div className="flex items-center gap-2.5">
