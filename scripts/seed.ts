@@ -26,7 +26,7 @@ const departments = [
     nameBn: "সিভিল ইঞ্জিনিয়ারিং",
     shortName: "CIV",
     icon: "Building2",
-    image: "https://sfile.chatglm.cn/images-ppt/f2e97c06d116.jpg",
+    image: "/campus/dept-civil-site.jpg",
     tagline: "Build the nation — structures, roads & infrastructure.",
     description:
       "Civil Engineering is one of the oldest and most significant branches of engineering, dealing with the design, construction and maintenance of the physical and naturally built environment — roads, bridges, canals, dams and buildings. Students gain comprehensive skills in structural, geotechnical, transportation, environmental and water-resources engineering.",
@@ -94,7 +94,7 @@ const departments = [
     nameBn: "টেক্সটাইল ইঞ্জিনিয়ারিং",
     shortName: "TEXT",
     icon: "Shirt",
-    image: "https://sfile.chatglm.cn/images-ppt/c7482fa38ced.jpg",
+    image: "/campus/dept-textile-lab.jpg",
     tagline: "Weave success in Bangladesh's largest export sector.",
     description:
       "Textile Engineering prepares students for the ready-made garment and textile sector — the backbone of Bangladesh's economy. The curriculum spans yarn manufacturing, weaving, knitting, wet processing, garment manufacturing and textile quality control, with strong industry linkage.",
@@ -331,22 +331,35 @@ const results = [
 ];
 
 const galleryItems = [
-  // Real Facebook page photos (from official NPI Manikganj page)
-  { title: "Students at College Main Gate", image: "/campus/fb-college-gate.jpg", category: "Events" },
-  { title: "Innovation Competition 2025 — Student Project Booth", image: "/campus/fb-innovation.jpg", category: "Events" },
-  { title: "Student Gathering at Control Room Building", image: "/campus/fb-control-room.jpg", category: "Events" },
-  { title: "Students & Staff Conference Meeting", image: "/campus/fb-conference.jpg", category: "Events" },
-  { title: "Admission Notice 2024-25 — ভর্তি বিজ্ঞপ্তি", image: "/campus/fb-admission-notice.jpg", category: "Campus" },
-  { title: "Admission Flyer — Courses & Facilities", image: "/campus/fb-admission-flyer.jpg", category: "Campus" },
-  { title: "Admission Poster — Program Details", image: "/campus/fb-admission-poster.jpg", category: "Campus" },
-  { title: "Certificate of Achievement — প্রশংসাপত্র", image: "/campus/fb-certificate.jpg", category: "Campus" },
-  // Stock campus/lab photos for variety
-  { title: "Central Library", image: "https://sfile.chatglm.cn/images-ppt/e7a5aec88aa3.jpg", category: "Campus" },
-  { title: "Engineering Workshop", image: "https://sfile.chatglm.cn/images-ppt/1db6becc734e.jpg", category: "Labs" },
-  { title: "Computer Programming Lab", image: "https://sfile.chatglm.cn/images-ppt/a954df05572b.jpg", category: "Labs" },
-  { title: "Practical Training Session", image: "https://sfile.chatglm.cn/images-ppt/367e09f1b7a9.jpg", category: "Labs" },
-  { title: "Annual Graduation Ceremony", image: "https://sfile.chatglm.cn/images-ppt/20955fc2b988.jpg", category: "Events" },
-  { title: "Modern Campus Building", image: "https://sfile.chatglm.cn/images-ppt/58a4ba917d79.jpg", category: "Campus" },
+  // Real NPI campus photos — Events
+  { title: "Annual Award Ceremony", image: "/campus/event-award-ceremony.jpg", category: "Events" },
+  { title: "Award Ceremony on Stage", image: "/campus/event-award-stage.jpg", category: "Events" },
+  { title: "Award Ceremony with Banner", image: "/campus/event-award-banner.jpg", category: "Events" },
+  { title: "Inter-Polytechnic Race — Medal Winners", image: "/campus/event-race-team.jpg", category: "Events" },
+  { title: "Memorial Wreath Laying Ceremony", image: "/campus/event-memorial.jpg", category: "Events" },
+  { title: "Trophy & Awards Distribution", image: "/campus/event-trophy.jpg", category: "Events" },
+  { title: "CST Department Celebration", image: "/campus/event-cst-dept.jpg", category: "Events" },
+  { title: "Project Exhibition — Water Saving Tech", image: "/campus/event-project-exhibition.jpg", category: "Events" },
+  { title: "Event Inauguration with Officials", image: "/campus/event-inauguration.jpg", category: "Events" },
+  { title: "Event Backdrop Photography", image: "/campus/event-backdrop.jpg", category: "Events" },
+  // Real NPI campus photos — Students
+  { title: "Students in Classroom Session", image: "/campus/students-classroom-flowers.jpg", category: "Students" },
+  { title: "Principal with Students", image: "/campus/students-principal.jpg", category: "Students" },
+  { title: "Rover Scout Group Activity", image: "/campus/students-scout-group.jpg", category: "Students" },
+  { title: "Semester Final Examination", image: "/campus/students-exam-hall.jpg", category: "Students" },
+  { title: "Classroom Interactive Activity", image: "/campus/students-classroom-papers.jpg", category: "Students" },
+  { title: "Student Seminar in Hall", image: "/campus/students-seminar.jpg", category: "Students" },
+  { title: "Students Group Photo Outdoors", image: "/campus/students-outdoor-group.jpg", category: "Students" },
+  // Real NPI campus photos — Labs
+  { title: "Surveying Field Training", image: "/campus/lab-survey-training.jpg", category: "Labs" },
+  { title: "Civil Construction Site Visit", image: "/campus/lab-civil-site.jpg", category: "Labs" },
+  { title: "Python Security System Project", image: "/campus/lab-python-project.jpg", category: "Labs" },
+  { title: "Electrical Project Demonstration", image: "/campus/lab-electrical-demo.jpg", category: "Labs" },
+  // Real NPI campus photos — Campus
+  { title: "Student Group on Campus Steps", image: "/campus/campus-group-steps.jpg", category: "Campus" },
+  { title: "Campus Lawn Gathering", image: "/campus/campus-group-lawn.jpg", category: "Campus" },
+  { title: "Students at College Main Gate", image: "/campus/fb-college-gate.jpg", category: "Campus" },
+  { title: "Innovation Competition Booth", image: "/campus/fb-innovation.jpg", category: "Campus" },
 ];
 
 const blogs = [

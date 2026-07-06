@@ -13,7 +13,7 @@ export default function FacultyPage() {
         title={<>Learn From <span className="text-gradient-gold">Experienced</span> Engineers & Mentors</>}
         subtitle="Our instructors blend academic depth with real-world industry experience — mentoring students both in the classroom and in the lab."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Faculty" }]}
-        bgImage="/campus/fb-control-room.jpg"
+        bgImage="/campus/leadership-meeting.jpg"
       />
       <Leadership />
       <Teachers />

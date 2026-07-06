@@ -183,3 +183,29 @@ Stage Summary:
 - All 7 sub-pages verified: each has dark green PageHeader with breadcrumbs + title + subtitle + background image. No broken/missing headers.
 - Navigation tested: desktop nav links work (click Admission → /admission loads), mobile hamburger menu shows all 8 links.
 - Site is now professionally organized into focused, dedicated pages instead of one cluttered scroll.
+
+---
+Task ID: rar-image-analysis
+Agent: main (Z.ai Code)
+Task: Analyze uploaded RAR file (npi image collection) images and place them across the website.
+
+Work Log:
+- Extracted RAR (npi image collection.rar, 8.9MB) using unrar → 36 JPG images (1080p to 2048p quality).
+- Copied all 36 images to public/campus/raw/ for processing.
+- Analyzed all 36 images in 4 batches of 9 using VLM (z-ai vision) — each image got a descriptive filename, 1-sentence description, and best placement category (hero/about/department/gallery-events/gallery-students/gallery-labs/gallery-campus/leadership/admission).
+- Verified department-specific images with a 2nd VLM pass: confirmed 545.jpg=construction-site(Civil), jhj.jpg=textile-lab(Textile), uiui.jpg=python-project(Computer), jmjm.jpg=leadership-meeting.
+- Selected best hero candidate via VLM: hero-students-event.jpg rated "Best" for hero.
+- Renamed all 36 images to descriptive names in public/campus/ (e.g. event-award-ceremony.jpg, students-scout-group.jpg, lab-survey-training.jpg, leadership-meeting.jpg, dept-civil-site.jpg, dept-textile-lab.jpg).
+- Updated seed: 25 gallery items now ALL real NPI photos across 5 categories (Events 10, Students 7, Labs 4, Campus 4). Added new "Students" category.
+- Updated department images: Civil Engineering → dept-civil-site.jpg (real construction site), Textile Engineering → dept-textile-lab.jpg (real sewing lab).
+- Updated hero slides: slide 1 → hero-campus-wide.jpg, slide 2 → lab-electrical-demo.jpg, slide 3 → fb-innovation.jpg (all real).
+- Updated About image collage: 4 real photos (campus-group-steps, lab-python-project, students-classroom-flowers, event-award-ceremony).
+- Updated Facebook section: 6 best real photos (students-principal, event-award-ceremony, event-race-team, lab-survey-training, students-scout-group, event-project-exhibition).
+- Updated all 7 sub-page headers (bgImage) to use real photos: about→campus-group-steps, academics→students-seminar, admission→admission-office-1, departments→lab-electrical-demo, faculty→leadership-meeting, gallery→event-award-ceremony, contact→students-principal.
+- Updated gallery CATS filter: ["All", "Events", "Students", "Labs", "Campus"].
+- Re-seeded database (25 gallery items). Lint clean, no runtime errors.
+
+Stage Summary:
+- VLM verified: hero shows real students photo, gallery has real photos with all 5 category filters, About + Departments pages use real campus photos, Civil Engineering card shows real construction site.
+- All 36 uploaded images analyzed and placed: 2 department-specific, 10 events, 7 students, 4 labs, 4 campus, 6 leadership, 2 admission, 3 hero candidates.
+- Website now uses 100% real NPI Manikganj campus photos (no generic stock images for gallery/hero/about/departments).

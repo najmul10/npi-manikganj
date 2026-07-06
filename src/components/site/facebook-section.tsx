@@ -6,14 +6,14 @@ import { SectionHeading } from "./section-heading";
 import { SITE, useUI } from "@/lib/store";
 import { Button } from "@/components/ui/button";
 
-// Real photos from official NPI Manikganj Facebook page
+// Real photos from official NPI Manikganj Facebook page + photo collection
 const FB_PHOTOS = [
-  { src: "/campus/fb-college-gate.jpg", caption: "Students at College Main Gate" },
-  { src: "/campus/fb-innovation.jpg", caption: "Innovation Competition 2025" },
-  { src: "/campus/fb-control-room.jpg", caption: "Student Gathering at Control Room" },
-  { src: "/campus/fb-conference.jpg", caption: "Students & Staff Conference" },
-  { src: "/campus/fb-admission-flyer.jpg", caption: "Admission Flyer 2024-25" },
-  { src: "/campus/fb-certificate.jpg", caption: "Certificate of Achievement" },
+  { src: "/campus/students-principal.jpg", caption: "Principal with Students" },
+  { src: "/campus/event-award-ceremony.jpg", caption: "Annual Award Ceremony" },
+  { src: "/campus/event-race-team.jpg", caption: "Inter-Polytechnic Race Winners" },
+  { src: "/campus/lab-survey-training.jpg", caption: "Surveying Field Training" },
+  { src: "/campus/students-scout-group.jpg", caption: "Rover Scout Group" },
+  { src: "/campus/event-project-exhibition.jpg", caption: "Project Exhibition" },
 ];
 
 export function FacebookSection() {

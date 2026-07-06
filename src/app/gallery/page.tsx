@@ -13,7 +13,7 @@ export default function GalleryPage() {
         title={<>Life at <span className="text-gradient-gold">NPI Manikganj</span></>}
         subtitle="A glimpse into our campus, labs, workshops, events and the vibrant moments that make student life memorable."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Gallery" }]}
-        bgImage="/campus/fb-college-gate.jpg"
+        bgImage="/campus/event-award-ceremony.jpg"
       />
       <Gallery />
       <FacebookSection />

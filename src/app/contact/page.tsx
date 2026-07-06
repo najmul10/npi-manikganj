@@ -12,7 +12,7 @@ export default function ContactPage() {
         title={<>Have Questions? <span className="text-gradient-gold">Let's Talk</span></>}
         subtitle="Visit our campus, call the admission hotline, or leave your feedback — we're here to help you take the next step."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
-        bgImage="/campus/fb-innovation.jpg"
+        bgImage="/campus/students-principal.jpg"
       />
       <Contact />
     </SiteShell>

@@ -12,7 +12,7 @@ export default function DepartmentsPage() {
         title={<>Our <span className="text-gradient-gold">Departments</span></>}
         subtitle="Eight industry-aligned Diploma in Engineering programs with modern labs, expert faculty and clear career pathways."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Departments" }]}
-        bgImage="/campus/fb-innovation.jpg"
+        bgImage="/campus/lab-electrical-demo.jpg"
       />
       <DepartmentsPageContent />
     </SiteShell>

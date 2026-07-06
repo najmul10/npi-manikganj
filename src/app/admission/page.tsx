@@ -12,7 +12,7 @@ export default function AdmissionPage() {
         title={<>Join the <span className="text-gradient-gold">NPI Manikganj</span> Family</>}
         subtitle="Diploma in Engineering admission open across 8 modern departments. Scholarships, job placement support and affordable fees — build your engineering career with us."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Admission" }]}
-        bgImage="/campus/fb-admission-flyer.jpg"
+        bgImage="/campus/admission-office-1.jpg"
       />
       <AdmissionPageContent />
     </SiteShell>

@@ -14,7 +14,7 @@ interface GalleryItem {
   category: string;
 }
 
-const CATS = ["All", "Campus", "Labs", "Events"];
+const CATS = ["All", "Events", "Students", "Labs", "Campus"];
 
 export function Gallery() {
   const { data, loading } = useFetch<GalleryItem[]>("/api/gallery");
