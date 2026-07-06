@@ -31,15 +31,15 @@ export function About() {
               <div className="space-y-3 sm:space-y-4">
                 <div className="overflow-hidden rounded-2xl shadow-lg aspect-[3/4]">
                   <img
-                    src="/campus/campus-group-steps.jpg"
-                    alt="NPI students on campus steps"
+                    src="/campus/about-1.jpeg"
+                    alt="NPI students and staff group photo"
                     className="h-full w-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 <div className="overflow-hidden rounded-2xl shadow-lg aspect-square">
                   <img
-                    src="/campus/lab-python-project.jpg"
-                    alt="Student project — Python security system"
+                    src="/campus/about-2.jpg"
+                    alt="Award ceremony at NPI Manikganj"
                     className="h-full w-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -47,15 +47,15 @@ export function About() {
               <div className="space-y-3 sm:space-y-4 pt-6 sm:pt-8">
                 <div className="overflow-hidden rounded-2xl shadow-lg aspect-square">
                   <img
-                    src="/campus/students-classroom-flowers.jpg"
-                    alt="Students in classroom session"
+                    src="/campus/about-3.jpg"
+                    alt="Trophy & certificate award in office"
                     className="h-full w-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 <div className="overflow-hidden rounded-2xl shadow-lg aspect-[3/4]">
                   <img
-                    src="/campus/event-award-ceremony.jpg"
-                    alt="Annual award ceremony"
+                    src="/campus/about-4.jpg"
+                    alt="Award presentation at conference"
                     className="h-full w-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
