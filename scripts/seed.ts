@@ -9,7 +9,7 @@ const departments = [
     nameBn: "কম্পিউটার ইঞ্জিনিয়ারিং",
     shortName: "CMT",
     icon: "Cpu",
-    image: "https://sfile.chatglm.cn/images-ppt/576b10c541b8.jpg",
+    image: "https://sfile.chatglm.cn/images-ppt/da461f865832.jpg",
     tagline: "Code the future — software, networks & AI systems.",
     description:
       "The Computer Engineering department prepares students for the fast-moving world of software, hardware and networking. The curriculum covers programming, data structures, database systems, web & mobile development, computer networks, microprocessors and an introduction to artificial intelligence. Students graduate job-ready for the IT industry.",
@@ -43,7 +43,7 @@ const departments = [
     nameBn: "ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং",
     shortName: "ELECT",
     icon: "Zap",
-    image: "https://sfile.chatglm.cn/images-ppt/4ee994e5b2d5.jpg",
+    image: "https://sfile.chatglm.cn/images-ppt/e7a42da5287c.jpg",
     tagline: "Power the world — generation, transmission & automation.",
     description:
       "Electrical Engineering deals with the study and application of electricity, electronics and electromagnetism. The department trains students in electrical machines, power systems, circuit design, PLC & industrial automation, renewable energy and electrical safety — producing engineers ready for the power sector and manufacturing industry.",
