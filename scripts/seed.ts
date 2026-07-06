@@ -9,7 +9,7 @@ const departments = [
     nameBn: "কম্পিউটার ইঞ্জিনিয়ারিং",
     shortName: "CMT",
     icon: "Cpu",
-    image: "/campus/lab-python-project.jpg",
+    image: "https://sfile.chatglm.cn/images-ppt/576b10c541b8.jpg",
     tagline: "Code the future — software, networks & AI systems.",
     description:
       "The Computer Engineering department prepares students for the fast-moving world of software, hardware and networking. The curriculum covers programming, data structures, database systems, web & mobile development, computer networks, microprocessors and an introduction to artificial intelligence. Students graduate job-ready for the IT industry.",
@@ -26,7 +26,7 @@ const departments = [
     nameBn: "সিভিল ইঞ্জিনিয়ারিং",
     shortName: "CIV",
     icon: "Building2",
-    image: "/campus/dept-civil-site.jpg",
+    image: "https://sfile.chatglm.cn/images-ppt/64f30b356ecd.jpg",
     tagline: "Build the nation — structures, roads & infrastructure.",
     description:
       "Civil Engineering is one of the oldest and most significant branches of engineering, dealing with the design, construction and maintenance of the physical and naturally built environment — roads, bridges, canals, dams and buildings. Students gain comprehensive skills in structural, geotechnical, transportation, environmental and water-resources engineering.",
@@ -43,7 +43,7 @@ const departments = [
     nameBn: "ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং",
     shortName: "ELECT",
     icon: "Zap",
-    image: "/campus/lab-electrical-demo.jpg",
+    image: "https://sfile.chatglm.cn/images-ppt/4ee994e5b2d5.jpg",
     tagline: "Power the world — generation, transmission & automation.",
     description:
       "Electrical Engineering deals with the study and application of electricity, electronics and electromagnetism. The department trains students in electrical machines, power systems, circuit design, PLC & industrial automation, renewable energy and electrical safety — producing engineers ready for the power sector and manufacturing industry.",
@@ -60,7 +60,7 @@ const departments = [
     nameBn: "মেকানিক্যাল ইঞ্জিনিয়ারিং",
     shortName: "MECH",
     icon: "Cog",
-    image: "https://sfile.chatglm.cn/images-ppt/3b93e5146288.jpg",
+    image: "https://sfile.chatglm.cn/images-ppt/e4eda96e1017.jpg",
     tagline: "Design & drive machines that move the world.",
     description:
       "Mechanical Engineering is the discipline that applies engineering physics, mathematics and materials science to design, analyze, manufacture and maintain mechanical systems. Students learn thermodynamics, fluid mechanics, machine design, manufacturing processes, CAD/CAM and quality control.",
@@ -77,7 +77,7 @@ const departments = [
     nameBn: "ফুড ইঞ্জিনিয়ারিং",
     shortName: "FOOD",
     icon: "Wheat",
-    image: "https://sfile.chatglm.cn/images-ppt/668586bf1bb1.jpg",
+    image: "https://sfile.chatglm.cn/images-ppt/f16e8833c0eb.jpg",
     tagline: "Engineer safe, nutritious food for millions.",
     description:
       "Food Engineering applies engineering principles to the storage, processing and distribution of food materials. The department covers food chemistry, microbiology, preservation, packaging, quality assurance and food plant management — preparing graduates for Bangladesh's growing agro-processing and food industry.",
@@ -94,7 +94,7 @@ const departments = [
     nameBn: "টেক্সটাইল ইঞ্জিনিয়ারিং",
     shortName: "TEXT",
     icon: "Shirt",
-    image: "/campus/dept-textile-lab.jpg",
+    image: "https://sfile.chatglm.cn/images-ppt/98a46b0a0484.jpg",
     tagline: "Weave success in Bangladesh's largest export sector.",
     description:
       "Textile Engineering prepares students for the ready-made garment and textile sector — the backbone of Bangladesh's economy. The curriculum spans yarn manufacturing, weaving, knitting, wet processing, garment manufacturing and textile quality control, with strong industry linkage.",
@@ -111,7 +111,7 @@ const departments = [
     nameBn: "আর্কিটেকচার ইঞ্জিনিয়ারিং",
     shortName: "ARCH",
     icon: "Compass",
-    image: "https://sfile.chatglm.cn/images-ppt/09bed4ef9112.jpg",
+    image: "https://sfile.chatglm.cn/images-ppt/88a39cf65c07.jpg",
     tagline: "Shape spaces — design that inspires.",
     description:
       "Architecture Engineering blends artistic design with engineering fundamentals. Students learn architectural drawing, building materials, construction methods, urban planning, interior design and 3D modeling — graduating as professionals who can design functional, sustainable and beautiful built environments.",
@@ -128,7 +128,7 @@ const departments = [
     nameBn: "অটোমোবাইল ইঞ্জিনিয়ারিং",
     shortName: "AUTO",
     icon: "Car",
-    image: "https://sfile.chatglm.cn/images-ppt/728ba6d22d85.png",
+    image: "https://sfile.chatglm.cn/images-ppt/7c3d8f99e8ce.jpg",
     tagline: "Keep the nation moving — vehicles & mobility tech.",
     description:
       "Automobile Engineering deals with the design, manufacturing, maintenance and repair of automobiles. Students study automotive engines, transmission systems, electrical & electronic vehicle systems, vehicle maintenance and emerging EV technology — meeting the rising demand for skilled automotive professionals.",
