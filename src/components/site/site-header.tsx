@@ -16,8 +16,13 @@ const NAV_ICONS: Record<string, LucideIcon> = {
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const openAdmission = useUI((s) => s.openAdmission);
+
+  useEffect(() => {
+    queueMicrotask(() => setMounted(true));
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -95,13 +100,14 @@ export function SiteHeader() {
               Apply Now
             </Button>
 
-            {/* Mobile menu */}
-            <Sheet open={open} onOpenChange={setOpen}>
-              <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="lg:hidden" aria-label="Open menu">
-                  <Menu className="h-5 w-5" />
-                </Button>
-              </SheetTrigger>
+            {/* Mobile menu — only render on client to avoid Radix ID hydration mismatch */}
+            {mounted ? (
+              <Sheet open={open} onOpenChange={setOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="outline" size="icon" className="lg:hidden" aria-label="Open menu">
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </SheetTrigger>
               <SheetContent side="right" showCloseButton={false} className="w-[300px] sm:w-[340px] p-0 flex flex-col">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 {/* Header with gradient */}
@@ -178,6 +184,11 @@ export function SiteHeader() {
                 </div>
               </SheetContent>
             </Sheet>
+            ) : (
+              <Button variant="outline" size="icon" className="lg:hidden" aria-label="Open menu" disabled>
+                <Menu className="h-5 w-5" />
+              </Button>
+            )}
           </div>
         </div>
       </div>
