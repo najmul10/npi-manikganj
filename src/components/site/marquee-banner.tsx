@@ -20,9 +20,11 @@ export function MarqueeBanner() {
       <div className="flex items-stretch">
         <button
           onClick={() => openAdmission()}
-          className="group relative z-10 shrink-0 inline-flex items-center gap-1.5 sm:gap-2 bg-brand-deep px-3.5 sm:px-5 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wide hover:bg-brand transition-colors"
+          className="group relative z-10 shrink-0 inline-flex items-center gap-1 sm:gap-2 bg-brand-deep px-3 sm:px-5 py-3 text-[11px] sm:text-sm font-semibold uppercase tracking-wide hover:bg-brand transition-colors"
         >
-          Admission Open
+          <Megaphone className="h-3.5 w-3.5 sm:hidden" />
+          <span className="hidden sm:inline">Admission Open</span>
+          <span className="sm:hidden">Admission</span>
           <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
         </button>
         <div className="relative flex-1 overflow-hidden py-3">
@@ -30,11 +32,11 @@ export function MarqueeBanner() {
             {loop.map((it, idx) => (
               <span
                 key={idx}
-                className="inline-flex items-center gap-2 px-5 sm:px-8 text-[12px] sm:text-sm font-medium text-white/95"
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-8 text-[13px] sm:text-sm font-medium text-white/95"
               >
-                <it.icon className="h-4 w-4 shrink-0" />
+                <it.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                 {it.text}
-                <span className="ml-6 text-white/40">✦</span>
+                <span className="ml-4 sm:ml-6 text-white/40">✦</span>
               </span>
             ))}
           </div>
