@@ -336,8 +336,10 @@ const galleryItems = [
   { title: "Innovation Competition 2025 — Student Project Booth", image: "/campus/fb-innovation.jpg", category: "Events" },
   { title: "Student Gathering at Control Room Building", image: "/campus/fb-control-room.jpg", category: "Events" },
   { title: "Students & Staff Conference Meeting", image: "/campus/fb-conference.jpg", category: "Events" },
-  { title: "Admission Notice & Program Highlights", image: "/campus/fb-admission-notice.jpg", category: "Campus" },
-  { title: "Admission Poster — Courses & Facilities", image: "/campus/fb-admission-poster.jpg", category: "Campus" },
+  { title: "Admission Notice 2024-25 — ভর্তি বিজ্ঞপ্তি", image: "/campus/fb-admission-notice.jpg", category: "Campus" },
+  { title: "Admission Flyer — Courses & Facilities", image: "/campus/fb-admission-flyer.jpg", category: "Campus" },
+  { title: "Admission Poster — Program Details", image: "/campus/fb-admission-poster.jpg", category: "Campus" },
+  { title: "Certificate of Achievement — প্রশংসাপত্র", image: "/campus/fb-certificate.jpg", category: "Campus" },
   // Stock campus/lab photos for variety
   { title: "Central Library", image: "https://sfile.chatglm.cn/images-ppt/e7a5aec88aa3.jpg", category: "Campus" },
   { title: "Engineering Workshop", image: "https://sfile.chatglm.cn/images-ppt/1db6becc734e.jpg", category: "Labs" },

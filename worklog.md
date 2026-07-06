@@ -126,3 +126,26 @@ Stage Summary:
 - VLM verified: Facebook section shows blue card with institute name + 3K followers + Follow button, 6 real campus photos in grid, "See More on Facebook" button. Mobile: 2-column grid, easy-to-tap Follow button, no layout issues.
 - All Facebook social links (topbar + footer) now point to the real official page.
 - Site is more authentic and connected to the college's real social presence.
+
+---
+Task ID: facebook-more-info
+Agent: main (Z.ai Code)
+Task: Read more info from official Facebook page (user logged in) and improve the website further.
+
+Work Log:
+- Note: page_reader is server-side and doesn't share user's browser login session; agent-browser also uses separate session. FB posts/about pages redirect to login.
+- Re-read FB photos page (photos_by URL) which exposes public thumbnails. Extracted all unique photo URLs from combined HTML.
+- Downloaded all 9 real FB photos at 480x480px (photo 3 "admission flyer with balloons" was previously failing at 720px, now succeeds at 480px).
+- VLM verified all 9 photo contents: admission notices (Bengali ভর্তি বিজ্ঞপ্তি), admission flyers, certificate (প্রশংসাপত্র), student group photos at gate/control room/conference, innovation competition booth.
+- Copied new photo (fb-admission-flyer.jpg) to public/campus/.
+- Updated seed galleryItems: now 14 items (8 real FB photos + 6 stock lab/campus) including new admission flyer + certificate.
+- Built new AdmissionBanner component: dedicated "Admission 2024-25" section with dark green gradient bg, gold badge, Bengali heading (ডিপ্লোমা ইন ইঞ্জিনিয়ারিং ভর্তি চলছে), 4 highlight cards (scholarships/job placement/departments/faculty in Bengali), Apply Now + Call buttons, and a 4-photo collage of REAL admission posters/flyer/certificate with floating "2024 Session" badge + "BTEB Approved" stamp.
+- Added AdmissionBanner to page between MarqueeBanner and About.
+- Updated FacebookSection: added BadgeCheck verification icon next to page name, added "20 following" stat, added new admission flyer photo, reordered photos.
+- Re-seeded database (14 gallery items). Lint clean, no runtime errors.
+
+Stage Summary:
+- VLM verified AdmissionBanner: gold badge ✓, Bengali heading ✓, 4 highlight cards ✓, Apply Now + Call buttons ✓, 4 real admission poster photos in collage ✓, floating 2024 Session badge + BTEB Approved stamp ✓. Mobile: stacked layout, full-width buttons, no issues.
+- VLM verified Facebook section: page name + followers + following + Official Page ✓, real campus photos ✓.
+- Full page audit: "Site looks great." No errors.
+- Real Facebook photos now prominently featured in: hero slide 3, new AdmissionBanner section (4 posters), gallery (8 photos), and Facebook section (6 photos).

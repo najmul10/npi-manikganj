@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Facebook, ExternalLink, Users, Heart, Share2, ArrowRight } from "lucide-react";
+import { Facebook, ExternalLink, Users, Heart, Share2, ArrowRight, BadgeCheck } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { SITE, useUI } from "@/lib/store";
 import { Button } from "@/components/ui/button";
@@ -12,8 +12,8 @@ const FB_PHOTOS = [
   { src: "/campus/fb-innovation.jpg", caption: "Innovation Competition 2025" },
   { src: "/campus/fb-control-room.jpg", caption: "Student Gathering at Control Room" },
   { src: "/campus/fb-conference.jpg", caption: "Students & Staff Conference" },
-  { src: "/campus/fb-admission-notice.jpg", caption: "Admission Notice" },
-  { src: "/campus/fb-admission-poster.jpg", caption: "Admission Poster" },
+  { src: "/campus/fb-admission-flyer.jpg", caption: "Admission Flyer 2024-25" },
+  { src: "/campus/fb-certificate.jpg", caption: "Certificate of Achievement" },
 ];
 
 export function FacebookSection() {
@@ -40,11 +40,16 @@ export function FacebookSection() {
               <Facebook className="h-7 w-7" />
             </div>
             <div className="flex-1 min-w-0">
-              <h3 className="font-serif font-bold text-lg sm:text-xl truncate">{SITE.facebookName}</h3>
+              <h3 className="font-serif font-bold text-lg sm:text-xl truncate flex items-center gap-1.5">
+                {SITE.facebookName}
+                <BadgeCheck className="h-5 w-5 text-white shrink-0" />
+              </h3>
               <p className="text-white/85 text-sm flex items-center gap-2 flex-wrap">
                 <span className="inline-flex items-center gap-1"><Users className="h-3.5 w-3.5" /> {SITE.facebookFollowers} followers</span>
                 <span className="text-white/50">·</span>
-                <span>Official Page</span>
+                <span>20 following</span>
+                <span className="text-white/50">·</span>
+                <span className="inline-flex items-center gap-1 font-semibold text-amber-200">Official Page</span>
               </p>
             </div>
             <a

@@ -4,6 +4,7 @@ import { Topbar } from "@/components/site/topbar";
 import { SiteHeader } from "@/components/site/site-header";
 import { Hero } from "@/components/site/hero";
 import { MarqueeBanner } from "@/components/site/marquee-banner";
+import { AdmissionBanner } from "@/components/site/admission-banner";
 import { About } from "@/components/site/about";
 import { Stats } from "@/components/site/stats";
 import { Departments } from "@/components/site/departments";
@@ -28,6 +29,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <MarqueeBanner />
+        <AdmissionBanner />
         <About />
         <Stats />
         <Departments />
