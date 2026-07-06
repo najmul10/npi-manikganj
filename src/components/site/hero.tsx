@@ -33,7 +33,7 @@ const SLIDES = [
     titleAccent: "+ Career Placement Support",
     bn: "প্রতি সেমিস্টারে মেধা বৃত্তি ও ক্যারিয়ার সহায়তা",
     desc: "We reward talent and open doors. Merit-based scholarships, special waivers and dedicated placement support help our graduates launch successful careers.",
-    image: "https://sfile.chatglm.cn/images-ppt/20955fc2b988.jpg",
+    image: "/campus/fb-innovation.jpg",
     cta: "Apply Now",
     cta2: "Why Choose NPI",
   },

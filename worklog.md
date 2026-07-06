@@ -99,3 +99,30 @@ Stage Summary:
 - VLM re-audit: hero CTAs now stacked full-width, heading size appropriate, tap targets adequate, layout clean. Full-page mobile audit: "All sections look good on mobile."
 - Admission modal opens as bottom sheet on mobile with 16px form inputs (no iOS zoom), full-width submit button.
 - All mobile UX issues resolved — site is now professional and usable on small screens.
+
+---
+Task ID: facebook-integration
+Agent: main (Z.ai Code)
+Task: Use official Facebook page (National Polytechnic Institute Manikganj) info & photos to improve the website.
+
+Work Log:
+- Read the official Facebook photos page via page_reader skill.
+- Extracted 11 image URLs from FB CDN (scontent.fbcdn.net). FB main/about pages redirect to login, but photos page exposed thumbnails.
+- FB page metadata gathered: page name "National Polytechnic Institute-NPI, Manikganj", 3K followers, 20 following.
+- Downloaded 7 real campus photos at 720x720px by modifying FB CDN crop params (ctp=s206x206 → ctp=s720x720) with proper User-Agent + Referer headers.
+- VLM verified photo contents: students at college main gate, innovation competition 2025 booth, student gathering at control room building, students & staff conference, admission notice, admission poster, certificate.
+- Copied 7 FB photos to public/campus/ (fb-college-gate.jpg, fb-innovation.jpg, fb-control-room.jpg, fb-conference.jpg, fb-admission-notice.jpg, fb-admission-poster.jpg, fb-certificate.jpg).
+- Updated SITE config: added facebook URL, facebookName, facebookFollowers ("3K").
+- Updated seed galleryItems: first 6 items now use real FB campus photos (students at gate, innovation, control room, conference, admission notice/poster) + 6 stock lab/campus photos.
+- Re-seeded database (12 gallery items now).
+- Built new FacebookSection component: blue FB page card (name + 3K followers + Follow button), 6-photo grid linking to FB page, "See More on Facebook" CTA, Apply for Admission link.
+- Added FacebookSection to page between Gallery and Testimonials.
+- Updated hero slide 3 background to use real FB innovation competition photo (/campus/fb-innovation.jpg).
+- Updated footer + topbar social links: Facebook icon now links to real FB page (hover bg #1877F2 brand blue), YouTube/LinkedIn hover colors added.
+- Lint clean, no runtime errors.
+
+Stage Summary:
+- Real Facebook campus photos now appear in: hero slide 3 (innovation competition), gallery (6 photos), and dedicated Facebook section (6 photos + page card).
+- VLM verified: Facebook section shows blue card with institute name + 3K followers + Follow button, 6 real campus photos in grid, "See More on Facebook" button. Mobile: 2-column grid, easy-to-tap Follow button, no layout issues.
+- All Facebook social links (topbar + footer) now point to the real official page.
+- Site is more authentic and connected to the college's real social presence.

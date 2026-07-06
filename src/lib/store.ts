@@ -26,6 +26,9 @@ export const SITE = {
   emailAlt: "info@npimanikganj.edu.bd",
   phone1: "01735782829",
   phone2: "01711349947",
+  facebook: "https://www.facebook.com/NationalPolytechnicInstituteManikganj",
+  facebookName: "National Polytechnic Institute-NPI, Manikganj",
+  facebookFollowers: "3K",
   address: "173/3 Narangai, Manikganj Sadar, Manikganj, Dhaka, Bangladesh",
   addressShort: "Narangai, Manikganj Sadar, Manikganj",
   mapEmbed:

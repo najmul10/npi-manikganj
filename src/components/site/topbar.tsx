@@ -29,7 +29,7 @@ export function Topbar() {
           </span>
           <span className="h-3 w-px bg-white/20" />
           <div className="flex items-center gap-2.5">
-            <a href="#" aria-label="Facebook" className="hover:text-amber-300 transition-colors"><Facebook className="h-4 w-4" /></a>
+            <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-amber-300 transition-colors"><Facebook className="h-4 w-4" /></a>
             <a href="#" aria-label="YouTube" className="hover:text-amber-300 transition-colors"><Youtube className="h-4 w-4" /></a>
             <a href="#" aria-label="LinkedIn" className="hover:text-amber-300 transition-colors"><Linkedin className="h-4 w-4" /></a>
           </div>

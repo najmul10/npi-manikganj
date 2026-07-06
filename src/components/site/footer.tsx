@@ -56,11 +56,15 @@ export function Footer() {
               A premier polytechnic institute dedicated to technical & engineering education — building skilled professionals for Bangladesh since {SITE.est}.
             </p>
             <div className="mt-5 flex items-center gap-3">
-              {[Facebook, Youtube, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" aria-label="Social link" className="grid place-items-center h-9 w-9 rounded-lg bg-white/15 hover:bg-gold text-white transition-colors">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid place-items-center h-9 w-9 rounded-lg bg-white/15 hover:bg-[#1877F2] text-white transition-colors">
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a href="#" aria-label="YouTube" className="grid place-items-center h-9 w-9 rounded-lg bg-white/15 hover:bg-red-600 text-white transition-colors">
+                <Youtube className="h-4 w-4" />
+              </a>
+              <a href="#" aria-label="LinkedIn" className="grid place-items-center h-9 w-9 rounded-lg bg-white/15 hover:bg-[#0a66c2] text-white transition-colors">
+                <Linkedin className="h-4 w-4" />
+              </a>
             </div>
             {/* Trust badges */}
             <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2">

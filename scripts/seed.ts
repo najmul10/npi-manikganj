@@ -331,17 +331,20 @@ const results = [
 ];
 
 const galleryItems = [
-  { title: "Annual Graduation Ceremony", image: "https://sfile.chatglm.cn/images-ppt/20955fc2b988.jpg", category: "Events" },
-  { title: "Convocation Moments", image: "https://sfile.chatglm.cn/images-ppt/3d831123f18f.png", category: "Events" },
+  // Real Facebook page photos (from official NPI Manikganj page)
+  { title: "Students at College Main Gate", image: "/campus/fb-college-gate.jpg", category: "Events" },
+  { title: "Innovation Competition 2025 — Student Project Booth", image: "/campus/fb-innovation.jpg", category: "Events" },
+  { title: "Student Gathering at Control Room Building", image: "/campus/fb-control-room.jpg", category: "Events" },
+  { title: "Students & Staff Conference Meeting", image: "/campus/fb-conference.jpg", category: "Events" },
+  { title: "Admission Notice & Program Highlights", image: "/campus/fb-admission-notice.jpg", category: "Campus" },
+  { title: "Admission Poster — Courses & Facilities", image: "/campus/fb-admission-poster.jpg", category: "Campus" },
+  // Stock campus/lab photos for variety
   { title: "Central Library", image: "https://sfile.chatglm.cn/images-ppt/e7a5aec88aa3.jpg", category: "Campus" },
-  { title: "Study & Research Corner", image: "https://sfile.chatglm.cn/images-ppt/39cac160317b.jpg", category: "Campus" },
   { title: "Engineering Workshop", image: "https://sfile.chatglm.cn/images-ppt/1db6becc734e.jpg", category: "Labs" },
-  { title: "Practical Training Session", image: "https://sfile.chatglm.cn/images-ppt/367e09f1b7a9.jpg", category: "Labs" },
   { title: "Computer Programming Lab", image: "https://sfile.chatglm.cn/images-ppt/a954df05572b.jpg", category: "Labs" },
-  { title: "Technology Classroom", image: "https://sfile.chatglm.cn/images-ppt/9f88c7d942ac.jpg", category: "Campus" },
-  { title: "PLC Practical Class", image: "https://npimanikganj.edu.bd/wp-content/uploads/2024/07/plc.jpg", category: "Labs" },
+  { title: "Practical Training Session", image: "https://sfile.chatglm.cn/images-ppt/367e09f1b7a9.jpg", category: "Labs" },
+  { title: "Annual Graduation Ceremony", image: "https://sfile.chatglm.cn/images-ppt/20955fc2b988.jpg", category: "Events" },
   { title: "Modern Campus Building", image: "https://sfile.chatglm.cn/images-ppt/58a4ba917d79.jpg", category: "Campus" },
-  { title: "Campus Architecture", image: "https://sfile.chatglm.cn/images-ppt/7cfed8aba957.jpg", category: "Campus" },
 ];
 
 const blogs = [

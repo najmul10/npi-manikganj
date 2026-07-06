@@ -12,6 +12,7 @@ import { Teachers } from "@/components/site/teachers";
 import { WhyChoose } from "@/components/site/why-choose";
 import { Academics } from "@/components/site/academics";
 import { Gallery } from "@/components/site/gallery";
+import { FacebookSection } from "@/components/site/facebook-section";
 import { BlogSection } from "@/components/site/blog";
 import { Testimonials } from "@/components/site/testimonials";
 import { Contact } from "@/components/site/contact";
@@ -35,6 +36,7 @@ export default function Home() {
         <WhyChoose />
         <Academics />
         <Gallery />
+        <FacebookSection />
         <Testimonials />
         <BlogSection />
         <Contact />
