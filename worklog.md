@@ -68,3 +68,34 @@ Work Log:
 Stage Summary:
 - VLM re-audit confirms: header consistent with real logo throughout, ALL text readable across every section, footer bright & readable, professional clean look. "No remaining issues."
 - Real NPI logo (blue/red circular, Established-2001) now used in header, mobile menu, footer, admission modal, and favicon.
+
+---
+Task ID: mobile-enhance
+Agent: main (Z.ai Code)
+Task: Mobile view enhancement — audit and improve all sections for mobile UX.
+
+Work Log:
+- Full mobile audit via Agent Browser (iPhone 14) — screenshotted all 14 sections + admission modal.
+- VLM analysis confirmed sections were "OK" but identified enhancement opportunities:
+  * Hero CTAs side-by-side (should stack full-width on mobile)
+  * Section padding too large on mobile
+  * Stats counter sizes too big for mobile
+  * Form inputs <16px (triggers iOS Safari auto-zoom)
+  * Gallery masonry row-span causing gaps on mobile
+  * Various spacing/sizing not optimized for small screens
+- Hero: stacked CTAs full-width on mobile (flex-col sm:flex-row, w-full sm:w-auto), heading text-[2rem] on mobile, adjusted content padding pt-10 pb-24, slide controls repositioned bottom-5 right-4 on mobile.
+- Section headings: reduced to text-[1.7rem] on mobile (from text-3xl).
+- All 10 main sections: reduced vertical padding from py-20 sm:py-28 → py-16 sm:py-24 lg:py-28.
+- Stats: icon 12x12 on mobile (from 14x14), counter text-3xl (from text-4xl), label text-xs (from text-sm), secondary strip items smaller on mobile, grid gap reduced.
+- Contact form + admission modal form inputs: font-size 16px (prevents iOS Safari auto-zoom on focus), padding increased to 0.7rem.
+- About image collage: gap-3 sm:gap-4, space-y-3 sm:space-y-4, pt-6 sm:pt-8.
+- Gallery: masonry row-span-2 only applies on md+ screens (was causing gaps on mobile 2-col grid), gap-2.5 sm:gap-4, auto-rows-auto.
+- Marquee banner: button px-3.5 text-xs on mobile, marquee text-[12px] px-5 on mobile.
+- Department cards: image h-36 sm:h-40, content p-4 sm:p-5, grid gap-4 sm:gap-5, mt-10 sm:mt-12.
+- Leadership cards: padding p-5 sm:p-7, gap-4 sm:gap-5, quote icon h-16 on mobile, image centered on mobile (flex sm:block justify-center).
+- Lint clean, no runtime errors.
+
+Stage Summary:
+- VLM re-audit: hero CTAs now stacked full-width, heading size appropriate, tap targets adequate, layout clean. Full-page mobile audit: "All sections look good on mobile."
+- Admission modal opens as bottom sheet on mobile with 16px form inputs (no iOS zoom), full-width submit button.
+- All mobile UX issues resolved — site is now professional and usable on small screens.

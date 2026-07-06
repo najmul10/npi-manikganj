@@ -47,7 +47,7 @@ export function Testimonials() {
 
   const t = TESTIMONIALS[i];
   return (
-    <section className="relative py-20 sm:py-28 bg-brand-deep overflow-hidden">
+    <section className="relative py-16 sm:py-24 lg:py-28 bg-brand-deep overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-15" />
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-80 w-[50rem] bg-gold/10 blur-3xl rounded-full" />
 

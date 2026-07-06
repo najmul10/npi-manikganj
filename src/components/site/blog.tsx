@@ -32,7 +32,7 @@ export function BlogSection() {
   const posts = (data ?? []).slice(0, 3);
 
   return (
-    <section id="blogs" className="relative py-20 sm:py-28 bg-secondary/40">
+    <section id="blogs" className="relative py-16 sm:py-24 lg:py-28 bg-secondary/40">
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <SectionHeading

@@ -15,7 +15,7 @@ const POINTS = [
 
 export function About() {
   return (
-    <section id="about" className="relative py-20 sm:py-28 bg-background">
+    <section id="about" className="relative py-16 sm:py-24 lg:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image collage */}
@@ -26,8 +26,8 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative grid grid-cols-2 gap-4">
-              <div className="space-y-4">
+            <div className="relative grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div className="overflow-hidden rounded-2xl shadow-lg aspect-[3/4]">
                   <img
                     src="https://sfile.chatglm.cn/images-ppt/58a4ba917d79.jpg"
@@ -43,7 +43,7 @@ export function About() {
                   />
                 </div>
               </div>
-              <div className="space-y-4 pt-8">
+              <div className="space-y-3 sm:space-y-4 pt-6 sm:pt-8">
                 <div className="overflow-hidden rounded-2xl shadow-lg aspect-square">
                   <img
                     src="https://sfile.chatglm.cn/images-ppt/e7a5aec88aa3.jpg"

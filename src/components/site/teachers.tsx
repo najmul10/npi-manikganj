@@ -23,7 +23,7 @@ export function Teachers() {
   const faculty = (data ?? []).filter((t) => t.order > 2);
 
   return (
-    <section id="faculty" className="relative py-20 sm:py-28 bg-secondary/40">
+    <section id="faculty" className="relative py-16 sm:py-24 lg:py-28 bg-secondary/40">
       <div className="mx-auto max-w-7xl px-4">
         <SectionHeading
           eyebrow="Our Faculty"

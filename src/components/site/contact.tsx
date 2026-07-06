@@ -41,7 +41,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20 sm:py-28 bg-background">
+    <section id="contact" className="relative py-16 sm:py-24 lg:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-4">
         <SectionHeading
           eyebrow="Get in Touch"
@@ -153,8 +153,8 @@ export function Contact() {
           border-radius: 0.625rem;
           border: 1px solid var(--border);
           background: var(--background);
-          padding: 0.625rem 0.875rem;
-          font-size: 0.9rem;
+          padding: 0.7rem 0.9rem;
+          font-size: 16px;
           outline: none;
           transition: box-shadow .15s, border-color .15s;
         }

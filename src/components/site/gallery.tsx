@@ -31,7 +31,7 @@ export function Gallery() {
     setLightbox((p) => (p === null ? p : (p + dir + items.length) % items.length));
 
   return (
-    <section id="gallery" className="relative py-20 sm:py-28 bg-background">
+    <section id="gallery" className="relative py-16 sm:py-24 lg:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-4">
         <SectionHeading
           eyebrow="Campus Gallery"
@@ -54,10 +54,10 @@ export function Gallery() {
           ))}
         </div>
 
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="mt-8 sm:mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4 auto-rows-auto">
           {loading
             ? Array.from({ length: 8 }).map((_, i) => (
-                <div key={i} className={cn("rounded-2xl bg-muted animate-pulse", i % 5 === 0 ? "row-span-2 h-full min-h-[16rem]" : "aspect-square")} />
+                <div key={i} className={cn("rounded-2xl bg-muted animate-pulse", i % 5 === 0 ? "md:row-span-2 h-full min-h-[12rem] md:min-h-[16rem]" : "aspect-square")} />
               ))
             : items.map((g, idx) => (
                 <motion.button
@@ -69,7 +69,7 @@ export function Gallery() {
                   onClick={() => setLightbox(idx)}
                   className={cn(
                     "group relative rounded-2xl overflow-hidden ring-1 ring-border hover:ring-brand/40 transition-all",
-                    idx % 7 === 0 ? "row-span-2 aspect-square md:aspect-auto md:h-full" : "aspect-square"
+                    idx % 7 === 0 ? "md:row-span-2 aspect-square md:aspect-auto md:h-full" : "aspect-square"
                   )}
                 >
                   <img

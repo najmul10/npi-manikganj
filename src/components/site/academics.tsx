@@ -17,7 +17,7 @@ const QUICK = [
 export function Academics() {
   const openAdmission = useUI((s) => s.openAdmission);
   return (
-    <section id="notices" className="relative py-20 sm:py-28 bg-background">
+    <section id="notices" className="relative py-16 sm:py-24 lg:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-4">
         <SectionHeading
           eyebrow="Academics & Student Services"

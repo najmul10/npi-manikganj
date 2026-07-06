@@ -231,8 +231,8 @@ export function AdmissionModal() {
               border-radius: 0.625rem;
               border: 1px solid var(--border);
               background: var(--background);
-              padding: 0.625rem 0.875rem;
-              font-size: 0.9rem;
+              padding: 0.7rem 0.9rem;
+              font-size: 16px;
               outline: none;
               transition: box-shadow .15s, border-color .15s;
             }

@@ -44,7 +44,7 @@ export function SectionHeading({
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.5 }}
         className={cn(
-          "text-3xl sm:text-4xl md:text-[2.7rem] leading-[1.12] font-bold tracking-tight",
+          "text-[1.7rem] sm:text-4xl md:text-[2.7rem] leading-[1.15] font-bold tracking-tight",
           light ? "text-white" : "text-foreground"
         )}
       >

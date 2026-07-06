@@ -42,7 +42,7 @@ export function Departments() {
   const depts = data ?? [];
 
   return (
-    <section id="departments" className="relative py-20 sm:py-28 bg-secondary/40">
+    <section id="departments" className="relative py-16 sm:py-24 lg:py-28 bg-secondary/40">
       <div className="mx-auto max-w-7xl px-4">
         <SectionHeading
           eyebrow="Academic Programs"
@@ -50,7 +50,7 @@ export function Departments() {
           subtitle="Choose from eight industry-aligned Diploma in Engineering programs — each designed with modern labs, expert faculty and clear career pathways."
         />
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="mt-10 sm:mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {loading
             ? Array.from({ length: 8 }).map((_, i) => (
                 <div key={i} className="rounded-2xl bg-card border border-border overflow-hidden animate-pulse">
@@ -72,7 +72,7 @@ export function Departments() {
                   transition={{ delay: (idx % 4) * 0.08, duration: 0.4 }}
                   className="group text-left rounded-2xl bg-card border border-border overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:border-brand/40 transition-all duration-300"
                 >
-                  <div className="relative h-40 overflow-hidden">
+                  <div className="relative h-36 sm:h-40 overflow-hidden">
                     <img
                       src={d.image}
                       alt={d.name}
@@ -89,7 +89,7 @@ export function Departments() {
                       <span className="text-white font-serif font-semibold text-sm" lang="bn">{d.nameBn}</span>
                     </div>
                   </div>
-                  <div className="p-5">
+                  <div className="p-4 sm:p-5">
                     <h3 className="font-serif font-bold text-lg text-foreground group-hover:text-brand transition-colors">
                       {d.name}
                     </h3>

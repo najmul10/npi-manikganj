@@ -53,7 +53,7 @@ export function Hero() {
   const slide = SLIDES[i];
 
   return (
-    <section id="home" className="relative min-h-[88vh] flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[92vh] sm:min-h-[88vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <AnimatePresence mode="sync">
@@ -74,7 +74,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative mx-auto max-w-7xl px-4 w-full pt-12 pb-20">
+      <div className="relative mx-auto max-w-7xl px-4 w-full pt-10 pb-24 sm:pt-12 sm:pb-20">
         <div className="max-w-2xl">
           <AnimatePresence mode="wait">
             <motion.div
@@ -88,7 +88,7 @@ export function Hero() {
                 <Sparkles className="h-3.5 w-3.5" />
                 {slide.eyebrow}
               </span>
-              <h1 className="mt-5 font-serif font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight">
+              <h1 className="mt-5 font-serif font-bold text-white text-[2rem] sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
                 {slide.title}{" "}
                 <span className="text-gradient-gold">{slide.titleAccent}</span>
               </h1>
@@ -98,11 +98,11 @@ export function Hero() {
               <p className="mt-4 text-white/90 text-base sm:text-lg leading-relaxed max-w-xl">
                 {slide.desc}
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3">
                 <Button
                   onClick={() => openAdmission()}
                   size="lg"
-                  className="bg-gold hover:bg-amber-600 text-white shadow-lg shadow-amber-900/30 group"
+                  className="bg-gold hover:bg-amber-600 text-white shadow-lg shadow-amber-900/30 group w-full sm:w-auto"
                 >
                   {slide.cta}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -111,7 +111,7 @@ export function Hero() {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm"
+                  className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm w-full sm:w-auto"
                 >
                   <a href={i === 1 ? "#faculty" : i === 2 ? "#why" : "#departments"}>
                     {slide.cta2}
@@ -123,7 +123,7 @@ export function Hero() {
           </AnimatePresence>
 
           {/* Trust badges */}
-          <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3">
+          <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2.5">
             <Badge icon={<GraduationCap className="h-4 w-4" />} text="BTEB Approved Curriculum" />
             <Badge icon={<ShieldCheck className="h-4 w-4" />} text="Job Placement Support" />
             <Badge icon={<Sparkles className="h-4 w-4" />} text="Merit Scholarships" />
@@ -132,7 +132,7 @@ export function Hero() {
       </div>
 
       {/* Controls */}
-      <div className="absolute bottom-7 right-4 sm:right-8 flex items-center gap-3 z-10">
+      <div className="absolute bottom-5 right-4 sm:bottom-7 sm:right-8 flex items-center gap-2 sm:gap-3 z-10">
         <button
           onClick={prev}
           aria-label="Previous slide"

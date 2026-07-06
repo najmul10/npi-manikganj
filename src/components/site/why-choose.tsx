@@ -41,7 +41,7 @@ const FEATURES = [
 export function WhyChoose() {
   const openAdmission = useUI((s) => s.openAdmission);
   return (
-    <section id="why" className="relative py-20 sm:py-28 bg-secondary/40 overflow-hidden">
+    <section id="why" className="relative py-16 sm:py-24 lg:py-28 bg-secondary/40 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 h-72 w-[60rem] bg-brand/5 blur-3xl rounded-full" />
       <div className="relative mx-auto max-w-7xl px-4">
         <SectionHeading

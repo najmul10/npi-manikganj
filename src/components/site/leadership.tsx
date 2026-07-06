@@ -37,7 +37,7 @@ export function Leadership() {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <section className="relative py-20 sm:py-28 bg-background">
+    <section className="relative py-16 sm:py-24 lg:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-4">
         <SectionHeading
           eyebrow="Leadership"
@@ -66,13 +66,13 @@ export function Leadership() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.12 }}
-                  className="relative rounded-3xl bg-gradient-to-br from-card to-secondary/40 border border-border p-6 sm:p-7 overflow-hidden hover:shadow-xl transition-shadow"
+                  className="relative rounded-3xl bg-gradient-to-br from-card to-secondary/40 border border-border p-5 sm:p-7 overflow-hidden hover:shadow-xl transition-shadow"
                 >
                   <div className="absolute top-4 right-5 text-brand/10">
-                    <Quote className="h-20 w-20" />
+                    <Quote className="h-16 w-16 sm:h-20 sm:w-20" />
                   </div>
-                  <div className="relative flex flex-col sm:flex-row gap-5">
-                    <div className="shrink-0">
+                  <div className="relative flex flex-col sm:flex-row gap-4 sm:gap-5">
+                    <div className="shrink-0 flex sm:block justify-center">
                       <div className="relative h-32 w-28 sm:h-36 sm:w-32 rounded-2xl overflow-hidden ring-4 ring-background shadow-lg">
                         <img src={l.image} alt={l.name} className="h-full w-full object-cover" />
                       </div>
