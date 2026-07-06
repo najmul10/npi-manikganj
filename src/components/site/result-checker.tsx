@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Award, BookOpen, Hash, User, GraduationCap, CheckCircle2, AlertCircle } from "lucide-react";
+import { Search, Award, BookOpen, Hash, User, GraduationCap, CheckCircle2, AlertCircle, ExternalLink, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Result {
@@ -74,6 +74,25 @@ export function ResultChecker() {
         <p className="mt-2 text-[11px] text-muted-foreground">
           Try a sample roll: <button onClick={() => setRoll("240308")} className="text-brand font-semibold hover:underline">240308</button>
         </p>
+
+        {/* Official Result Portal link */}
+        <a
+          href="https://diplomaresultbd.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 group flex items-center justify-between gap-3 rounded-xl bg-gradient-to-r from-brand to-brand-deep text-white p-4 hover:shadow-lg hover:shadow-brand/20 transition-all"
+        >
+          <div className="flex items-center gap-3">
+            <div className="grid place-items-center h-10 w-10 rounded-lg bg-white/15 shrink-0">
+              <GraduationCap className="h-5 w-5 text-white" />
+            </div>
+            <div>
+              <div className="font-serif font-bold text-sm">Official Result Portal</div>
+              <div className="text-xs text-white/80">Check BTEB Diploma results on diplomaresultbd.com</div>
+            </div>
+          </div>
+          <ExternalLink className="h-4 w-4 text-white/80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
+        </a>
 
         <AnimatePresence mode="wait">
           {error && (
