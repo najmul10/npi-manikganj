@@ -143,7 +143,7 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="relative border-t border-white/15 bg-brand-deep">
         <div className="mx-auto max-w-7xl px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/80">
-          <p>© {new Date().getFullYear()} NPI Manikganj — National Polytechnic Institute. All rights reserved.</p>
+          <p>© {SITE.est}–{new Date().getFullYear()} NPI Manikganj — National Polytechnic Institute. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/contact" className="hover:text-amber-300 transition-colors">Privacy Policy</Link>
             <Link href="/contact" className="hover:text-amber-300 transition-colors">Terms of Service</Link>
