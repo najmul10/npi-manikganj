@@ -20,8 +20,8 @@ interface Notice {
 const CATS = ["All", "Admission", "Exam", "Routine", "Academic", "Event", "Results", "General"];
 
 const CAT_COLORS: Record<string, string> = {
-  Admission: "bg-emerald-100 text-emerald-700",
-  Exam: "bg-amber-100 text-amber-700",
+  Admission: "bg-emerald-100 text-blue-700",
+  Exam: "bg-blue-100 text-blue-700",
   Routine: "bg-sky-100 text-sky-700",
   Academic: "bg-violet-100 text-violet-700",
   Event: "bg-rose-100 text-rose-700",
@@ -43,7 +43,7 @@ export function NoticeBoard() {
     <div className="rounded-3xl bg-card border border-border overflow-hidden shadow-sm">
       <div className="flex items-center gap-3 px-6 py-4 border-b border-border bg-brand-gradient text-white">
         <div className="grid place-items-center h-10 w-10 rounded-xl bg-white/15">
-          <Megaphone className="h-5 w-5 text-amber-300" />
+          <Megaphone className="h-5 w-5 text-red-400" />
         </div>
         <div>
           <h3 className="font-serif font-bold text-lg">Notice Board</h3>

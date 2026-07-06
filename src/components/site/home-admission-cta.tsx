@@ -21,7 +21,7 @@ export function HomeAdmissionCTA() {
 
           <div className="relative grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full bg-gold/20 border border-gold/30 px-4 py-1.5 text-amber-200 text-xs font-bold uppercase tracking-[0.16em]">
+              <span className="inline-flex items-center gap-2 rounded-full bg-gold/20 border border-gold/30 px-4 py-1.5 text-red-300 text-xs font-bold uppercase tracking-[0.16em]">
                 <GraduationCap className="h-3.5 w-3.5" />
                 Admission 2024-25
               </span>
@@ -35,7 +35,7 @@ export function HomeAdmissionCTA() {
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={() => openAdmission()}
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gold hover:bg-amber-500 text-white px-7 py-3.5 font-bold shadow-lg transition-colors w-full sm:w-auto"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gold hover:bg-red-600 text-white px-7 py-3.5 font-bold shadow-lg transition-colors w-full sm:w-auto"
                 >
                   Apply Now
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -66,7 +66,7 @@ export function HomeAdmissionCTA() {
                   transition={{ delay: 0.1 + i * 0.08 }}
                   className="rounded-2xl bg-white/10 border border-white/20 p-5 backdrop-blur-sm"
                 >
-                  <div className="grid place-items-center h-10 w-10 rounded-xl bg-gold/20 text-amber-300 mb-3">
+                  <div className="grid place-items-center h-10 w-10 rounded-xl bg-gold/20 text-red-400 mb-3">
                     <p.icon className="h-5 w-5" />
                   </div>
                   <div className="font-serif font-bold text-base">{p.title}</div>

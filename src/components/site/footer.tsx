@@ -32,7 +32,7 @@ export function Footer() {
               placeholder="Enter your email"
               className="w-full md:w-72 rounded-lg bg-white/15 border border-white/30 px-4 py-2.5 text-sm text-white placeholder:text-white/70 outline-none focus:ring-2 focus:ring-gold/50"
             />
-            <button className="shrink-0 inline-flex items-center gap-2 rounded-lg bg-gold hover:bg-amber-500 text-white px-4 py-2.5 text-sm font-bold transition-colors">
+            <button className="shrink-0 inline-flex items-center gap-2 rounded-lg bg-gold hover:bg-red-600 text-white px-4 py-2.5 text-sm font-bold transition-colors">
               <Send className="h-4 w-4" /> Subscribe
             </button>
           </form>
@@ -64,10 +64,10 @@ export function Footer() {
             {/* Trust badges */}
             <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2">
               <span className="inline-flex items-center gap-1.5 text-xs text-white/85 font-medium">
-                <ShieldCheck className="h-3.5 w-3.5 text-amber-300" /> BTEB Approved
+                <ShieldCheck className="h-3.5 w-3.5 text-red-400" /> BTEB Approved
               </span>
               <span className="inline-flex items-center gap-1.5 text-xs text-white/85 font-medium">
-                <Award className="h-3.5 w-3.5 text-amber-300" /> Est. {SITE.est}
+                <Award className="h-3.5 w-3.5 text-red-400" /> Est. {SITE.est}
               </span>
             </div>
           </div>
@@ -77,8 +77,8 @@ export function Footer() {
             <ul className="space-y-2.5">
               {NAV.map((n) => (
                 <li key={n.href}>
-                  <Link href={n.href} className="group inline-flex items-center gap-1.5 text-sm text-white/85 hover:text-amber-300 transition-colors font-medium">
-                    <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all text-amber-300" />
+                  <Link href={n.href} className="group inline-flex items-center gap-1.5 text-sm text-white/85 hover:text-red-400 transition-colors font-medium">
+                    <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all text-red-400" />
                     {n.label}
                   </Link>
                 </li>
@@ -91,14 +91,14 @@ export function Footer() {
             <ul className="space-y-2.5">
               {DEPT_LINKS.map((d) => (
                 <li key={d}>
-                  <Link href="/departments" className="group inline-flex items-center gap-1.5 text-sm text-white/85 hover:text-amber-300 transition-colors font-medium">
-                    <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all text-amber-300" />
+                  <Link href="/departments" className="group inline-flex items-center gap-1.5 text-sm text-white/85 hover:text-red-400 transition-colors font-medium">
+                    <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all text-red-400" />
                     {d}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/departments" className="text-sm text-amber-300 hover:underline font-semibold">+ 3 more departments</Link>
+                <Link href="/departments" className="text-sm text-red-400 hover:underline font-semibold">+ 3 more departments</Link>
               </li>
             </ul>
           </FooterCol>
@@ -107,25 +107,25 @@ export function Footer() {
           <FooterCol title="Contact Us">
             <ul className="space-y-3.5 text-sm">
               <li className="flex gap-2.5">
-                <MapPin className="h-4 w-4 text-amber-300 shrink-0 mt-0.5" />
+                <MapPin className="h-4 w-4 text-red-400 shrink-0 mt-0.5" />
                 <span className="text-white/90">{SITE.address}</span>
               </li>
               <li>
-                <a href={`tel:${SITE.phone1}`} className="flex gap-2.5 text-white/90 hover:text-amber-300 transition-colors">
-                  <Phone className="h-4 w-4 text-amber-300 shrink-0 mt-0.5" />
+                <a href={`tel:${SITE.phone1}`} className="flex gap-2.5 text-white/90 hover:text-red-400 transition-colors">
+                  <Phone className="h-4 w-4 text-red-400 shrink-0 mt-0.5" />
                   <span className="font-medium">{SITE.phone1}<br />{SITE.phone2}</span>
                 </a>
               </li>
               <li>
-                <a href={`mailto:${SITE.email}`} className="flex gap-2.5 text-white/90 hover:text-amber-300 transition-colors">
-                  <Mail className="h-4 w-4 text-amber-300 shrink-0 mt-0.5" />
+                <a href={`mailto:${SITE.email}`} className="flex gap-2.5 text-white/90 hover:text-red-400 transition-colors">
+                  <Mail className="h-4 w-4 text-red-400 shrink-0 mt-0.5" />
                   <span className="font-medium">{SITE.email}</span>
                 </a>
               </li>
             </ul>
             <button
               onClick={() => openAdmission()}
-              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-gold hover:bg-amber-500 text-white px-4 py-2 text-sm font-bold transition-colors"
+              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-gold hover:bg-red-600 text-white px-4 py-2 text-sm font-bold transition-colors"
             >
               <GraduationCap className="h-4 w-4" />
               Apply for Admission
@@ -139,9 +139,9 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/80">
           <p>© {SITE.est}–{new Date().getFullYear()} NPI Manikganj — National Polytechnic Institute. All rights reserved.</p>
           <div className="flex items-center gap-4 flex-wrap justify-center">
-            <Link href="/privacy-policy" className="hover:text-amber-300 transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="hover:text-amber-300 transition-colors">Terms of Service</Link>
-            <Link href="/" className="hover:text-amber-300 transition-colors">Back to Top ↑</Link>
+            <Link href="/privacy-policy" className="hover:text-red-400 transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-red-400 transition-colors">Terms of Service</Link>
+            <Link href="/" className="hover:text-red-400 transition-colors">Back to Top ↑</Link>
           </div>
         </div>
         {/* Developer credit */}
@@ -152,7 +152,7 @@ export function Footer() {
               href="https://www.facebook.com/rifat660"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 font-semibold text-amber-300 hover:text-amber-200 hover:underline transition-colors"
+              className="inline-flex items-center gap-1 font-semibold text-red-400 hover:text-red-300 hover:underline transition-colors"
             >
               <Facebook className="h-3.5 w-3.5" />
               Kazi Rifat <span className="text-white/60 font-normal">(NPI Student)</span>

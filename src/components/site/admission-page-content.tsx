@@ -132,7 +132,7 @@ export function AdmissionPageContent() {
               <div className="relative">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="grid place-items-center h-11 w-11 rounded-xl bg-white/15">
-                    <Gift className="h-6 w-6 text-amber-300" />
+                    <Gift className="h-6 w-6 text-red-400" />
                   </div>
                   <h3 className="font-serif font-bold text-xl">Why Apply to NPI Manikganj?</h3>
                 </div>
@@ -151,7 +151,7 @@ export function AdmissionPageContent() {
                       transition={{ delay: i * 0.08 }}
                       className="rounded-2xl bg-white/10 border border-white/20 p-4 backdrop-blur-sm"
                     >
-                      <div className="grid place-items-center h-9 w-9 rounded-lg bg-gold/20 text-amber-300 mb-2.5">
+                      <div className="grid place-items-center h-9 w-9 rounded-lg bg-gold/20 text-red-400 mb-2.5">
                         <p.icon className="h-4.5 w-4.5" />
                       </div>
                       <div className="font-serif font-bold text-sm">{p.title}</div>
@@ -161,7 +161,7 @@ export function AdmissionPageContent() {
                 </div>
                 <div className="mt-6 pt-6 border-t border-white/15">
                   <a href={`tel:${SITE.phone1}`} className="flex items-center justify-center gap-2 rounded-xl bg-white/15 border border-white/30 py-3 font-semibold hover:bg-white/20 transition-colors">
-                    <Phone className="h-4 w-4 text-amber-300" />
+                    <Phone className="h-4 w-4 text-red-400" />
                     Admission Hotline: {SITE.phone1}
                   </a>
                 </div>

@@ -119,7 +119,7 @@ export function DepartmentsPageContent() {
                     </div>
                     <div>
                       <h3 className="font-serif font-bold text-2xl">{selected.name}</h3>
-                      <p className="text-amber-200 text-sm" lang="bn">{selected.nameBn}</p>
+                      <p className="text-red-300 text-sm" lang="bn">{selected.nameBn}</p>
                     </div>
                   </div>
                 </div>

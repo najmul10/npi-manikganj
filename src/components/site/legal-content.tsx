@@ -76,7 +76,7 @@ export function LegalContent({
           <div className="absolute inset-0 bg-grid opacity-15" />
           <div className="relative flex items-start gap-4">
             <div className="grid place-items-center h-11 w-11 rounded-xl bg-white/15 shrink-0">
-              <ShieldCheck className="h-6 w-6 text-amber-300" />
+              <ShieldCheck className="h-6 w-6 text-red-400" />
             </div>
             <div>
               <h3 className="font-serif font-bold text-lg">Questions about this policy?</h3>

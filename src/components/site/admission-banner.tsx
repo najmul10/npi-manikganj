@@ -17,7 +17,7 @@ export function AdmissionBanner() {
     <section className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-brand-deep via-brand to-brand-deep overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-15" />
       <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
-      <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-emerald-400/10 blur-3xl" />
+      <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-blue-400/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
@@ -49,7 +49,7 @@ export function AdmissionBanner() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.16 }}
-              className="mt-3 text-amber-100 font-semibold text-lg"
+              className="mt-3 text-red-100 font-semibold text-lg"
               lang="bn"
             >
               SSC পরীক্ষায় উত্তীর্ণ শিক্ষার্থীদের জন্য স্বপ্নের ক্যারিয়ারের সুযোগ
@@ -76,7 +76,7 @@ export function AdmissionBanner() {
                   transition={{ delay: 0.24 + idx * 0.06 }}
                   className="flex items-start gap-2.5 rounded-xl bg-white/10 border border-white/15 px-3 py-2.5 backdrop-blur-sm"
                 >
-                  <div className="grid place-items-center h-8 w-8 rounded-lg bg-gold/20 text-amber-300 shrink-0">
+                  <div className="grid place-items-center h-8 w-8 rounded-lg bg-gold/20 text-red-400 shrink-0">
                     <h.icon className="h-4 w-4" />
                   </div>
                   <div className="min-w-0">
@@ -96,7 +96,7 @@ export function AdmissionBanner() {
             >
               <button
                 onClick={() => openAdmission()}
-                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gold hover:bg-amber-500 text-white px-7 py-3.5 font-bold shadow-lg transition-colors w-full sm:w-auto"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gold hover:bg-red-600 text-white px-7 py-3.5 font-bold shadow-lg transition-colors w-full sm:w-auto"
               >
                 Apply Now — আবেদন করুন
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -174,7 +174,7 @@ export function AdmissionBanner() {
               transition={{ delay: 0.6 }}
               className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 bg-white text-brand-deep rounded-2xl shadow-2xl px-4 py-3 flex items-center gap-2"
             >
-              <CheckCircle2 className="h-5 w-5 text-emerald-600" />
+              <CheckCircle2 className="h-5 w-5 text-blue-700" />
               <div className="leading-tight">
                 <div className="text-sm font-bold">BTEB Approved</div>
                 <div className="text-[10px] text-foreground/70">Est. {SITE.est}</div>

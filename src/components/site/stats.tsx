@@ -70,7 +70,7 @@ export function Stats() {
               className="text-center text-white"
             >
               <div className="mx-auto grid place-items-center h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-sm mb-3 sm:mb-4">
-                <it.icon className="h-6 w-6 sm:h-7 sm:w-7 text-amber-300" />
+                <it.icon className="h-6 w-6 sm:h-7 sm:w-7 text-red-400" />
               </div>
               <div className="text-3xl sm:text-5xl font-serif font-bold tracking-tight">
                 {loading ? <span className="opacity-50">—</span> : <Counter to={it.value} suffix={it.suffix} />}

@@ -90,7 +90,7 @@ export function WhyChoose() {
             </div>
             <button
               onClick={() => openAdmission()}
-              className="group shrink-0 inline-flex items-center gap-2 rounded-xl bg-gold hover:bg-amber-500 text-white px-7 py-3.5 font-semibold shadow-lg transition-colors"
+              className="group shrink-0 inline-flex items-center gap-2 rounded-xl bg-gold hover:bg-red-600 text-white px-7 py-3.5 font-semibold shadow-lg transition-colors"
             >
               Apply for Admission
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

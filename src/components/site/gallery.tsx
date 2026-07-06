@@ -79,7 +79,7 @@ export function Gallery() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity" />
                   <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-left">
-                    <span className="inline-block text-[10px] uppercase tracking-wide font-bold text-amber-300 bg-black/30 px-2 py-0.5 rounded backdrop-blur-sm">
+                    <span className="inline-block text-[10px] uppercase tracking-wide font-bold text-red-400 bg-black/30 px-2 py-0.5 rounded backdrop-blur-sm">
                       {g.category}
                     </span>
                     <h4 className="mt-1.5 text-white font-semibold text-sm leading-tight line-clamp-2">{g.title}</h4>
@@ -120,7 +120,7 @@ export function Gallery() {
             >
               <img src={items[lightbox].image} alt={items[lightbox].title} className="w-full max-h-[80vh] object-contain rounded-lg" />
               <figcaption className="mt-4 text-center text-white">
-                <span className="text-xs uppercase tracking-wide text-amber-300">{items[lightbox].category}</span>
+                <span className="text-xs uppercase tracking-wide text-red-400">{items[lightbox].category}</span>
                 <h4 className="font-serif font-semibold text-lg">{items[lightbox].title}</h4>
                 <p className="text-white/50 text-sm">{lightbox + 1} / {items.length}</p>
               </figcaption>

@@ -97,9 +97,9 @@ export function AdmissionModal() {
                 </div>
               </div>
               <div className="relative mt-4 flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-white/85">
-                <span className="inline-flex items-center gap-1.5"><Gift className="h-3.5 w-3.5 text-amber-300" /> Merit Scholarships</span>
-                <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-amber-300" /> Job Placement Support</span>
-                <span className="inline-flex items-center gap-1.5"><GraduationCap className="h-3.5 w-3.5 text-amber-300" /> 8 Departments</span>
+                <span className="inline-flex items-center gap-1.5"><Gift className="h-3.5 w-3.5 text-red-400" /> Merit Scholarships</span>
+                <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-red-400" /> Job Placement Support</span>
+                <span className="inline-flex items-center gap-1.5"><GraduationCap className="h-3.5 w-3.5 text-red-400" /> 8 Departments</span>
               </div>
             </div>
 
@@ -110,7 +110,7 @@ export function AdmissionModal() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: "spring", damping: 14 }}
-                  className="mx-auto grid place-items-center h-16 w-16 rounded-full bg-emerald-100 text-emerald-600"
+                  className="mx-auto grid place-items-center h-16 w-16 rounded-full bg-emerald-100 text-blue-700"
                 >
                   <CheckCircle2 className="h-9 w-9" />
                 </motion.div>

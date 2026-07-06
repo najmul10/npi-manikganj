@@ -8,12 +8,12 @@ export function Topbar() {
     <div className="hidden md:block bg-brand-deep text-white/90 text-[13px]">
       <div className="mx-auto max-w-7xl px-4 flex items-center justify-between h-10">
         <div className="flex items-center gap-5">
-          <a href={`mailto:${SITE.email}`} className="flex items-center gap-1.5 hover:text-amber-300 transition-colors">
+          <a href={`mailto:${SITE.email}`} className="flex items-center gap-1.5 hover:text-red-400 transition-colors">
             <Mail className="h-3.5 w-3.5" />
             {SITE.email}
           </a>
           <span className="h-3 w-px bg-white/20" />
-          <a href={`tel:${SITE.phone1}`} className="flex items-center gap-1.5 hover:text-amber-300 transition-colors">
+          <a href={`tel:${SITE.phone1}`} className="flex items-center gap-1.5 hover:text-red-400 transition-colors">
             <Phone className="h-3.5 w-3.5" />
             {SITE.phone1}
           </a>
@@ -29,7 +29,7 @@ export function Topbar() {
           </span>
           <span className="h-3 w-px bg-white/20" />
           <div className="flex items-center gap-2.5">
-            <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-amber-300 transition-colors"><Facebook className="h-4 w-4" /></a>
+            <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-red-400 transition-colors"><Facebook className="h-4 w-4" /></a>
           </div>
         </div>
       </div>

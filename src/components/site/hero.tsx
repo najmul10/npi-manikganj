@@ -85,7 +85,7 @@ export function Hero() {
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 rounded-full bg-gold text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] shadow-lg shadow-amber-900/20">
+              <span className="inline-flex items-center gap-2 rounded-full bg-gold text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] shadow-lg shadow-red-900/20">
                 <Sparkles className="h-3.5 w-3.5" />
                 {slide.eyebrow}
               </span>
@@ -93,7 +93,7 @@ export function Hero() {
                 {slide.title}{" "}
                 <span className="text-gradient-gold">{slide.titleAccent}</span>
               </h1>
-              <p className="mt-3 text-amber-200 font-semibold text-lg" lang="bn">
+              <p className="mt-3 text-red-300 font-semibold text-lg" lang="bn">
                 {slide.bn}
               </p>
               <p className="mt-4 text-white/90 text-base sm:text-lg leading-relaxed max-w-xl">
@@ -103,7 +103,7 @@ export function Hero() {
                 <Button
                   onClick={() => openAdmission()}
                   size="lg"
-                  className="bg-gold hover:bg-amber-600 text-white shadow-lg shadow-amber-900/30 group w-full sm:w-auto"
+                  className="bg-gold hover:bg-red-700 text-white shadow-lg shadow-red-900/30 group w-full sm:w-auto"
                 >
                   {slide.cta}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -174,7 +174,7 @@ export function Hero() {
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
     <span className="inline-flex items-center gap-2 text-white text-sm font-semibold">
-      <span className="grid place-items-center h-7 w-7 rounded-full bg-white/15 border border-white/25 text-amber-300">
+      <span className="grid place-items-center h-7 w-7 rounded-full bg-white/15 border border-white/25 text-red-400">
         {icon}
       </span>
       {text}

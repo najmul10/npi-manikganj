@@ -53,11 +53,11 @@ export function PageHeader({
             {breadcrumbs.map((c, i) => (
               <span key={i} className="inline-flex items-center gap-1.5">
                 {c.href ? (
-                  <Link href={c.href} className="hover:text-amber-300 transition-colors">
+                  <Link href={c.href} className="hover:text-red-400 transition-colors">
                     {c.label}
                   </Link>
                 ) : (
-                  <span className="text-amber-300 font-medium">{c.label}</span>
+                  <span className="text-red-400 font-medium">{c.label}</span>
                 )}
                 {i < breadcrumbs.length - 1 && <ChevronRight className="h-3.5 w-3.5 text-white/40" />}
               </span>
@@ -69,9 +69,9 @@ export function PageHeader({
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-amber-300"
+            className="inline-flex items-center gap-2 mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red-400"
           >
-            <span className="h-px w-6 bg-amber-300/60" />
+            <span className="h-px w-6 bg-red-400/60" />
             {eyebrow}
           </motion.div>
         )}

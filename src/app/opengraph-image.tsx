@@ -16,7 +16,7 @@ export default async function OGImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #1a5d4a 0%, #0d3d30 100%)",
+          background: "linear-gradient(135deg, #1e3a8a 0%, #0f1e4d 100%)",
           padding: "80px",
           position: "relative",
         }}
@@ -31,7 +31,7 @@ export default async function OGImage() {
             backgroundSize: "40px 40px",
           }}
         />
-        {/* Gold accent bar */}
+        {/* Red accent bar */}
         <div
           style={{
             position: "absolute",
@@ -39,7 +39,7 @@ export default async function OGImage() {
             left: 0,
             right: 0,
             height: "8px",
-            background: "linear-gradient(90deg, #d4a017, #e6b422)",
+            background: "linear-gradient(90deg, #dc2626, #ef4444)",
           }}
         />
         {/* Badge */}
@@ -55,7 +55,7 @@ export default async function OGImage() {
             marginBottom: "32px",
           }}
         >
-          <span style={{ fontSize: 20, color: "#e6b422", fontWeight: 700, letterSpacing: "0.12em" }}>
+          <span style={{ fontSize: 20, color: "#ef4444", fontWeight: 700, letterSpacing: "0.12em" }}>
             ADMISSION 2024-25 OPEN
           </span>
         </div>
@@ -79,7 +79,7 @@ export default async function OGImage() {
             display: "flex",
             fontSize: 44,
             fontWeight: 600,
-            color: "#e6b422",
+            color: "#ef4444",
             marginTop: "12px",
             fontFamily: "Georgia, serif",
           }}
@@ -120,7 +120,7 @@ export default async function OGImage() {
                 fontWeight: 600,
               }}
             >
-              <span style={{ color: "#e6b422", fontSize: 24 }}>•</span>
+              <span style={{ color: "#ef4444", fontSize: 24 }}>•</span>
               {t}
             </div>
           ))}

@@ -97,8 +97,8 @@ export function ResultChecker() {
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-emerald-600" />
-                  <span className="font-semibold text-emerald-700 text-sm uppercase tracking-wide">Passed</span>
+                  <CheckCircle2 className="h-5 w-5 text-blue-700" />
+                  <span className="font-semibold text-blue-700 text-sm uppercase tracking-wide">Passed</span>
                 </div>
                 <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
                   <BookOpen className="h-3.5 w-3.5" /> {result.semester} · {result.year}

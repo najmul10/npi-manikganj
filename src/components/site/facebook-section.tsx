@@ -49,7 +49,7 @@ export function FacebookSection() {
                 <span className="text-white/50">·</span>
                 <span>20 following</span>
                 <span className="text-white/50">·</span>
-                <span className="inline-flex items-center gap-1 font-semibold text-amber-200">Official Page</span>
+                <span className="inline-flex items-center gap-1 font-semibold text-red-300">Official Page</span>
               </p>
             </div>
             <a

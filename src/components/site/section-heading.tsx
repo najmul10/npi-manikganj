@@ -30,7 +30,7 @@ export function SectionHeading({
           viewport={{ once: true, margin: "-80px" }}
           className={cn(
             "inline-flex items-center gap-2 mb-3 text-xs font-semibold uppercase tracking-[0.18em]",
-            light ? "text-amber-300" : "text-gold"
+            light ? "text-red-400" : "text-gold"
           )}
         >
           <span className="h-px w-6 bg-current opacity-60" />
