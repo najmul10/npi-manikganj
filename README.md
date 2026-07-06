@@ -68,14 +68,39 @@ A modern, professional education website for the National Polytechnic Institute 
 
 ## 📦 Deployment on Vercel
 
-1. Push your code to GitHub.
-2. Go to [vercel.com](https://vercel.com) and import your repository.
-3. Vercel will automatically detect Next.js — no extra configuration needed.
-4. Set the environment variable:
-   - `DATABASE_URL` = `file:./db/custom.db` (or use a hosted database)
-5. Deploy!
+This app uses **Turso (libSQL)** as the production database for persistent storage on Vercel's serverless platform.
 
-> **Note:** For production, consider using a hosted database (PostgreSQL/MySQL) instead of SQLite. Update `prisma/schema.prisma` accordingly.
+### Step 1: Set up Turso (free)
+
+1. Sign up at [turso.tech](https://turso.tech) (use GitHub login)
+2. Create a database (e.g. `npi-manikganj`)
+3. Get your **Database URL** (`libsql://...`) and **Auth Token** from the Turso dashboard
+
+### Step 2: Push schema & seed data
+
+```bash
+# Set env vars (or export them in your shell)
+export TURSO_DATABASE_URL="libsql://your-db.turso.io"
+export DATABASE_AUTH_TOKEN="your-auth-token"
+
+# Create tables
+bun run scripts/turso-push.ts
+
+# Seed initial data (departments, teachers, notices, gallery, etc.)
+bun run scripts/turso-seed.ts
+```
+
+### Step 3: Deploy to Vercel
+
+1. Push your code to GitHub (already done in this repo)
+2. Go to [vercel.com](https://vercel.com) → "New Project" → import this repository
+3. Vercel auto-detects Next.js — no build config needed
+4. Add **Environment Variables** in Vercel dashboard:
+   - `DATABASE_URL` = `libsql://npi-manikganj-btebresultsbd.aws-ap-northeast-1.turso.io`
+   - `DATABASE_AUTH_TOKEN` = your Turso auth token
+5. Deploy! 🚀
+
+> **Why Turso?** Vercel's serverless platform has an ephemeral filesystem — local SQLite files are wiped on every cold start. Turso provides persistent SQLite-compatible storage that works perfectly with the existing Prisma schema (no changes needed). Free tier: 5GB storage, 1B reads/month.
 
 ## 📂 Project Structure
 
