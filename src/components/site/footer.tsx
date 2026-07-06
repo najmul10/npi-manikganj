@@ -144,10 +144,25 @@ export function Footer() {
       <div className="relative border-t border-white/15 bg-brand-deep">
         <div className="mx-auto max-w-7xl px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/80">
           <p>© {SITE.est}–{new Date().getFullYear()} NPI Manikganj — National Polytechnic Institute. All rights reserved.</p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-wrap justify-center">
             <Link href="/contact" className="hover:text-amber-300 transition-colors">Privacy Policy</Link>
             <Link href="/contact" className="hover:text-amber-300 transition-colors">Terms of Service</Link>
             <Link href="/" className="hover:text-amber-300 transition-colors">Back to Top ↑</Link>
+          </div>
+        </div>
+        {/* Developer credit */}
+        <div className="border-t border-white/10">
+          <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-center gap-1.5 text-xs text-white/70">
+            <span>Developed by</span>
+            <a
+              href="https://www.facebook.com/rifat660"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-semibold text-amber-300 hover:text-amber-200 hover:underline transition-colors"
+            >
+              <Facebook className="h-3.5 w-3.5" />
+              Kazi Rifat
+            </a>
           </div>
         </div>
       </div>
