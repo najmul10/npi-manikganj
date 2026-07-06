@@ -68,14 +68,14 @@ export function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl ring-1 ring-border px-6 py-4 flex items-center gap-4"
+              className="absolute -bottom-4 sm:-bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl ring-1 ring-border px-3.5 py-2.5 sm:px-6 sm:py-4 flex items-center gap-2.5 sm:gap-4"
             >
-              <div className="grid place-items-center h-12 w-12 rounded-xl bg-brand-gradient text-white">
-                <Award className="h-6 w-6" />
+              <div className="grid place-items-center h-8 w-8 sm:h-12 sm:w-12 rounded-lg sm:rounded-xl bg-brand-gradient text-white shrink-0">
+                <Award className="h-4 w-4 sm:h-6 sm:w-6" />
               </div>
               <div className="leading-tight">
-                <div className="text-2xl font-serif font-bold text-foreground">EST. {SITE.est}</div>
-                <div className="text-xs text-muted-foreground">BTEB Approved Institute</div>
+                <div className="text-base sm:text-2xl font-serif font-bold text-foreground">EST. {SITE.est}</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground">BTEB Approved Institute</div>
               </div>
             </motion.div>
           </motion.div>
