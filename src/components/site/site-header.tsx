@@ -14,7 +14,7 @@ export function SiteHeader() {
   const openAdmission = useUI((s) => s.openAdmission);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -40,48 +40,44 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 transition-all duration-300",
+        "sticky top-0 z-50 transition-all duration-300 bg-white",
         scrolled
-          ? "bg-background/85 backdrop-blur-md shadow-sm border-b border-border"
-          : "bg-background/0 border-b border-transparent"
+          ? "shadow-md border-b border-border"
+          : "shadow-sm border-b border-border/60"
       )}
     >
       <div className="mx-auto max-w-7xl px-4">
-        <div className="flex items-center justify-between h-[68px]">
+        <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 group">
-            <div className="relative h-11 w-11 rounded-xl bg-brand-gradient flex items-center justify-center shadow-md ring-1 ring-black/5 overflow-hidden">
+            <div className="relative h-12 w-12 rounded-full bg-white flex items-center justify-center ring-1 ring-border overflow-hidden shrink-0">
               <img
                 src={SITE.logo}
-                alt="NPI Logo"
-                className="h-8 w-8 object-contain brightness-0 invert"
-                onError={(e) => {
-                  (e.currentTarget.style.display = "none");
-                }}
+                alt="NPI Manikganj Logo"
+                className="h-full w-full object-contain"
               />
-              <GraduationCap className="h-6 w-6 text-white absolute inset-0 m-auto" />
             </div>
             <div className="leading-tight">
-              <div className="font-serif font-bold text-[17px] sm:text-lg text-foreground tracking-tight">
+              <div className="font-serif font-bold text-[18px] sm:text-[19px] text-foreground tracking-tight">
                 NPI <span className="text-brand">Manikganj</span>
               </div>
-              <div className="text-[10.5px] sm:text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-medium">
+              <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.14em] text-foreground/70 font-semibold">
                 National Polytechnic Institute
               </div>
             </div>
           </a>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-0.5">
             {NAV.map((n) => (
               <a
                 key={n.href}
                 href={n.href}
                 className={cn(
-                  "relative px-3.5 py-2 text-sm font-medium rounded-md transition-colors",
+                  "relative px-3.5 py-2 text-sm font-semibold rounded-md transition-colors",
                   active === n.href
                     ? "text-brand"
-                    : "text-foreground/75 hover:text-brand"
+                    : "text-foreground/80 hover:text-brand"
                 )}
               >
                 {n.label}
@@ -96,19 +92,19 @@ export function SiteHeader() {
           <div className="flex items-center gap-2">
             <a
               href={`tel:${SITE.phone1}`}
-              className="hidden xl:flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-brand transition-colors px-3"
+              className="hidden xl:flex items-center gap-2.5 text-sm font-medium text-foreground/85 hover:text-brand transition-colors pl-3"
             >
-              <span className="grid place-items-center h-9 w-9 rounded-full bg-brand/10 text-brand">
+              <span className="grid place-items-center h-10 w-10 rounded-full bg-brand/10 text-brand">
                 <Phone className="h-4 w-4" />
               </span>
               <span className="leading-tight">
-                <span className="block text-[10px] uppercase tracking-wide text-muted-foreground">Admission Hotline</span>
-                {SITE.phone1}
+                <span className="block text-[10px] uppercase tracking-wide text-foreground/60 font-semibold">Admission Hotline</span>
+                <span className="block font-bold text-foreground">{SITE.phone1}</span>
               </span>
             </a>
             <Button
               onClick={() => openAdmission()}
-              className="hidden sm:inline-flex bg-brand hover:bg-brand-deep text-white shadow-md shadow-brand/20"
+              className="hidden sm:inline-flex bg-brand hover:bg-brand-deep text-white shadow-md shadow-brand/20 font-semibold"
             >
               Apply Now
             </Button>
@@ -122,15 +118,18 @@ export function SiteHeader() {
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[340px] p-0">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-                <div className="flex items-center justify-between p-4 border-b">
-                  <div className="flex items-center gap-2">
-                    <div className="h-9 w-9 rounded-lg bg-brand-gradient grid place-items-center">
-                      <GraduationCap className="h-5 w-5 text-white" />
+                <div className="flex items-center justify-between p-4 border-b bg-brand-deep">
+                  <div className="flex items-center gap-2.5">
+                    <div className="h-10 w-10 rounded-full bg-white ring-1 ring-white/20 overflow-hidden">
+                      <img src={SITE.logo} alt="NPI Logo" className="h-full w-full object-contain" />
                     </div>
-                    <span className="font-serif font-bold text-lg">NPI Manikganj</span>
+                    <div className="text-white">
+                      <div className="font-serif font-bold text-base leading-tight">NPI Manikganj</div>
+                      <div className="text-[10px] uppercase tracking-wide text-white/70">Polytechnic Institute</div>
+                    </div>
                   </div>
                   <SheetClose asChild>
-                    <Button variant="ghost" size="icon"><X className="h-5 w-5" /></Button>
+                    <Button variant="ghost" size="icon" className="text-white hover:bg-white/10"><X className="h-5 w-5" /></Button>
                   </SheetClose>
                 </div>
                 <nav className="flex flex-col p-3">
@@ -138,7 +137,7 @@ export function SiteHeader() {
                     <SheetClose asChild key={n.href}>
                       <a
                         href={n.href}
-                        className="flex items-center justify-between px-3 py-3 rounded-lg text-[15px] font-medium hover:bg-accent transition-colors"
+                        className="flex items-center justify-between px-3 py-3 rounded-lg text-[15px] font-semibold text-foreground/85 hover:bg-accent hover:text-brand transition-colors"
                       >
                         {n.label}
                         <ChevronDown className="h-4 w-4 -rotate-90 text-muted-foreground" />
@@ -149,12 +148,12 @@ export function SiteHeader() {
                 <div className="p-4 border-t mt-auto space-y-3">
                   <Button
                     onClick={() => { setOpen(false); openAdmission(); }}
-                    className="w-full bg-brand hover:bg-brand-deep text-white"
+                    className="w-full bg-brand hover:bg-brand-deep text-white font-semibold"
                   >
                     Apply for Admission
                   </Button>
-                  <a href={`tel:${SITE.phone1}`} className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                    <Phone className="h-4 w-4" /> {SITE.phone1}
+                  <a href={`tel:${SITE.phone1}`} className="flex items-center justify-center gap-2 text-sm font-semibold text-foreground">
+                    <Phone className="h-4 w-4 text-brand" /> {SITE.phone1}
                   </a>
                 </div>
               </SheetContent>

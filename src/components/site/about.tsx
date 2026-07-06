@@ -99,7 +99,7 @@ export function About() {
                   className="flex items-start gap-3"
                 >
                   <CheckCircle2 className="h-5 w-5 text-brand shrink-0 mt-0.5" />
-                  <span className="text-foreground/80 leading-relaxed">{p}</span>
+                  <span className="text-foreground/85 leading-relaxed font-medium">{p}</span>
                 </motion.li>
               ))}
             </ul>
@@ -111,7 +111,7 @@ export function About() {
                   <Target className="h-5 w-5" />
                 </div>
                 <h3 className="font-serif font-bold text-lg text-foreground">Our Mission</h3>
-                <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">
+                <p className="mt-1.5 text-sm text-foreground/80 leading-relaxed font-medium">
                   Deliver affordable, industry-relevant engineering education that transforms students into skilled professionals.
                 </p>
               </div>
@@ -120,7 +120,7 @@ export function About() {
                   <Eye className="h-5 w-5" />
                 </div>
                 <h3 className="font-serif font-bold text-lg text-foreground">Our Vision</h3>
-                <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">
+                <p className="mt-1.5 text-sm text-foreground/80 leading-relaxed font-medium">
                   To be the leading polytechnic institute in the region, recognized for excellence, innovation and graduate success.
                 </p>
               </div>

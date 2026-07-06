@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, CheckCircle2, GraduationCap, Gift, ShieldCheck, Loader2 } from "lucide-react";
 import { useFetch } from "@/hooks/use-fetch";
-import { useUI } from "@/lib/store";
+import { useUI, SITE } from "@/lib/store";
 
 interface Department {
   id: string;
@@ -88,8 +88,8 @@ export function AdmissionModal() {
                 <X className="h-5 w-5" />
               </button>
               <div className="relative flex items-center gap-3">
-                <div className="grid place-items-center h-12 w-12 rounded-xl bg-white/15">
-                  <GraduationCap className="h-7 w-7 text-amber-300" />
+                <div className="h-12 w-12 rounded-full bg-white ring-1 ring-white/25 overflow-hidden shrink-0">
+                  <img src={SITE.logo} alt="NPI Logo" className="h-full w-full object-contain" />
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-xl">Admission Application</h3>

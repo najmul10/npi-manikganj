@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "NPI Manikganj" }],
   icons: {
-    icon: "https://npimanikganj.edu.bd/wp-content/uploads/2023/09/logo.png",
+    icon: "/npi-logo.jpg",
+    apple: "/npi-logo.jpg",
   },
   openGraph: {
     title: "National Polytechnic Institute, Manikganj (NPI)",

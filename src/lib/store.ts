@@ -21,7 +21,7 @@ export const SITE = {
   location: "Manikganj",
   fullNameBn: "ন্যাশনাল পলিটেকনিক ইনস্টিটিউট, মানিকগঞ্জ",
   tagline: "Excellence in Technical & Engineering Education",
-  logo: "https://npimanikganj.edu.bd/wp-content/uploads/2023/09/logo.png",
+  logo: "/npi-logo.jpg",
   email: "contact@npimanikganj.edu.bd",
   emailAlt: "info@npimanikganj.edu.bd",
   phone1: "01735782829",
@@ -38,7 +38,7 @@ export const SITE = {
     { day: "Thursday", time: "8:00 AM – 5:00 PM" },
     { day: "Friday – Saturday", time: "Closed" },
   ],
-  est: 2023,
+  est: 2001,
 };
 
 export const NAV = [

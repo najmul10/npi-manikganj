@@ -87,9 +87,9 @@ export function Stats() {
             { k: `${data?.placement ?? 92}%`, v: "Graduate Placement Rate" },
             { k: `${data?.yearsOfExcellence ?? 1}+`, v: "Years of Excellence" },
           ].map((s) => (
-            <div key={s.v} className="flex items-center justify-center gap-3 rounded-xl bg-white/8 border border-white/15 px-4 py-3 backdrop-blur-sm">
-              <span className="text-2xl font-serif font-bold text-amber-300">{s.k}</span>
-              <span className="text-sm text-white/80">{s.v}</span>
+            <div key={s.v} className="flex items-center justify-center gap-3 rounded-xl bg-white/15 border border-white/25 px-4 py-3 backdrop-blur-sm">
+              <span className="text-2xl font-serif font-bold text-white">{s.k}</span>
+              <span className="text-sm text-white/90 font-medium">{s.v}</span>
             </div>
           ))}
         </div>

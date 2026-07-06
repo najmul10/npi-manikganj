@@ -43,3 +43,28 @@ Stage Summary:
   - Mobile hamburger menu opens with nav + Apply button.
   - Feedback form submit → record saved to DB (Feedback table, rating 5).
 - Site is fully functional, responsive, and visually polished.
+
+---
+Task ID: audit-2
+Agent: main (Z.ai Code)
+Task: Step-by-step audit of full site for text visibility/contrast issues; use real NPI logo; make site more professional.
+
+Work Log:
+- Step-by-step screenshot audit of all 14 sections via Agent Browser + VLM analysis.
+- Identified issues: transparent header (low contrast nav/hotline text), hero badge poor contrast (light amber on cream), stats secondary strip low contrast, footer text too faint (white/70 on dark green), About mission/vision text too light, wrong established year (2023 vs logo's 2001), placeholder logo.
+- Added brand/brand-deep/gold as proper Tailwind v4 theme colors in globals.css (fixes bg-brand/bg-gold utilities being overridden — root cause of green buttons/badges appearing transparent).
+- Rewrote SiteHeader: always solid white bg, real circular NPI logo, stronger nav text (foreground/80 + brand active), prominent Admission Hotline block, mobile sheet with dark green header + real logo.
+- Fixed hero badge: solid gold bg with white bold text + shadow (was light amber on cream).
+- Brightened hero Bengali subtitle (amber-200) and body text (white/90), trust badges (white font-semibold), Scroll hint (white/85).
+- Fixed stats secondary strip: white/15 bg + white numbers + white/90 labels (was light amber low-contrast).
+- Rewrote Footer: real NPI logo in brand column, all body text white/85-90 (was white/70), contact info white/90 font-medium, newsletter strip bg-white/5 with brighter input, added BTEB/Est trust badges, bottom bar text white/80.
+- Updated SITE config: logo → /npi-logo.jpg, est → 2001 (matches logo's "Established-2001").
+- Updated layout.tsx favicon/apple icon → /npi-logo.jpg.
+- Updated seed: all 8 departments establishedYear 2023 → 2001; re-seeded DB.
+- Updated About: mission/vision body text foreground/80 font-medium (was muted-foreground); checklist items foreground/85 font-medium.
+- Updated AdmissionModal header: real NPI logo in circle (was GraduationCap icon).
+- Lint clean, no runtime/console errors.
+
+Stage Summary:
+- VLM re-audit confirms: header consistent with real logo throughout, ALL text readable across every section, footer bright & readable, professional clean look. "No remaining issues."
+- Real NPI logo (blue/red circular, Established-2001) now used in header, mobile menu, footer, admission modal, and favicon.
