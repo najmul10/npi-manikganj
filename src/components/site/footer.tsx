@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { MapPin, Phone, Mail, Facebook, Youtube, Linkedin, ArrowRight, Send, ShieldCheck, Award, GraduationCap } from "lucide-react";
 import { SITE, NAV, useUI } from "@/lib/store";
 
@@ -82,10 +83,10 @@ export function Footer() {
             <ul className="space-y-2.5">
               {NAV.map((n) => (
                 <li key={n.href}>
-                  <a href={n.href} className="group inline-flex items-center gap-1.5 text-sm text-white/85 hover:text-amber-300 transition-colors font-medium">
+                  <Link href={n.href} className="group inline-flex items-center gap-1.5 text-sm text-white/85 hover:text-amber-300 transition-colors font-medium">
                     <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all text-amber-300" />
                     {n.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -96,14 +97,14 @@ export function Footer() {
             <ul className="space-y-2.5">
               {DEPT_LINKS.map((d) => (
                 <li key={d}>
-                  <a href="#departments" className="group inline-flex items-center gap-1.5 text-sm text-white/85 hover:text-amber-300 transition-colors font-medium">
+                  <Link href="/departments" className="group inline-flex items-center gap-1.5 text-sm text-white/85 hover:text-amber-300 transition-colors font-medium">
                     <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all text-amber-300" />
                     {d}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
-                <a href="#departments" className="text-sm text-amber-300 hover:underline font-semibold">+ 3 more departments</a>
+                <Link href="/departments" className="text-sm text-amber-300 hover:underline font-semibold">+ 3 more departments</Link>
               </li>
             </ul>
           </FooterCol>
@@ -144,9 +145,9 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/80">
           <p>© {new Date().getFullYear()} NPI Manikganj — National Polytechnic Institute. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-amber-300 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-amber-300 transition-colors">Terms of Service</a>
-            <a href="#home" className="hover:text-amber-300 transition-colors">Back to Top ↑</a>
+            <Link href="/contact" className="hover:text-amber-300 transition-colors">Privacy Policy</Link>
+            <Link href="/contact" className="hover:text-amber-300 transition-colors">Terms of Service</Link>
+            <Link href="/" className="hover:text-amber-300 transition-colors">Back to Top ↑</Link>
           </div>
         </div>
       </div>

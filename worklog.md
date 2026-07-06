@@ -149,3 +149,37 @@ Stage Summary:
 - VLM verified Facebook section: page name + followers + following + Official Page ✓, real campus photos ✓.
 - Full page audit: "Site looks great." No errors.
 - Real Facebook photos now prominently featured in: hero slide 3, new AdmissionBanner section (4 posters), gallery (8 photos), and Facebook section (6 photos).
+
+---
+Task ID: multipage-restructure
+Agent: main (Z.ai Code)
+Task: Restructure site into multi-page architecture — home was too cluttered, move sections to dedicated pages.
+
+Work Log:
+- Planned 8-page architecture: Home (clean), About, Departments, Admission, Academics, Faculty, Gallery, Contact.
+- Updated NAV config: anchor links (#home, #about) → real routes (/, /about, /departments, /admission, /academics, /faculty, /gallery, /contact). Added "Admission" as a top-level nav item.
+- Built PageHeader component: reusable page banner with breadcrumbs (Home > X), title, subtitle, and background image overlay — used on all sub-pages.
+- Built SiteShell component: wraps Topbar + SiteHeader + main + Footer + AdmissionModal + BackToTop — used by every page for consistency.
+- Rewrote SiteHeader: uses usePathname() for active state detection, Link components for client-side navigation, active underline indicator.
+- Cleaned Home page: removed AdmissionBanner (moved to /admission), removed Academics section, removed Gallery, removed Blog, removed Contact, removed Leadership, removed Teachers. Home now has: Hero → Marquee → About → Stats → HomeDepartments (4-card teaser) → WhyChoose → HomeAdmissionCTA (clean CTA) → Testimonials → FacebookSection.
+- Built HomeDepartments: shows first 4 departments as teasers with "View All Departments" link to /departments.
+- Built HomeAdmissionCTA: clean compact CTA section (replaced huge AdmissionBanner on home) with 4 perk cards + Apply Now + Admission Details buttons.
+- Updated About component: "Explore Departments" button → "Learn More About Us" linking to /about.
+- Built 7 sub-pages:
+  * /about: PageHeader + About + Stats + WhyChoose + Leadership
+  * /departments: PageHeader + DepartmentsPageContent (full 8-dept grid + detail modal)
+  * /admission: PageHeader + AdmissionPageContent (AdmissionBanner + Process + Requirements/Perks + FAQ)
+  * /academics: PageHeader + Academics (notice board + result checker + quick links) + BlogSection
+  * /faculty: PageHeader + Leadership + Teachers
+  * /gallery: PageHeader + Gallery + FacebookSection
+  * /contact: PageHeader + Contact
+- Updated Footer: all links use Next.js Link, Departments links → /departments, bottom bar links → proper routes.
+- Updated Hero CTA buttons: anchor links → Link components to /faculty, /admission, /departments.
+- Updated Academics quick links: anchor → Link to /contact.
+- Lint clean, no runtime errors.
+
+Stage Summary:
+- VLM verified: home page is now CLEAN and uncluttered, big admission section removed (only clean CTA remains). Professional design.
+- All 7 sub-pages verified: each has dark green PageHeader with breadcrumbs + title + subtitle + background image. No broken/missing headers.
+- Navigation tested: desktop nav links work (click Admission → /admission loads), mobile hamburger menu shows all 8 links.
+- Site is now professionally organized into focused, dedicated pages instead of one cluttered scroll.

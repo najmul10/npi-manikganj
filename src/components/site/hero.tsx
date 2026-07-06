@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, ArrowRight, Sparkles, ShieldCheck, GraduationCap } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useUI } from "@/lib/store";
 
@@ -113,10 +114,10 @@ export function Hero() {
                   variant="outline"
                   className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm w-full sm:w-auto"
                 >
-                  <a href={i === 1 ? "#faculty" : i === 2 ? "#why" : "#departments"}>
+                  <Link href={i === 1 ? "/faculty" : i === 2 ? "/admission" : "/departments"}>
                     {slide.cta2}
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </motion.div>

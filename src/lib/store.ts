@@ -45,12 +45,12 @@ export const SITE = {
 };
 
 export const NAV = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Departments", href: "#departments" },
-  { label: "Academics", href: "#notices" },
-  { label: "Faculty", href: "#faculty" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Blogs", href: "#blogs" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Departments", href: "/departments" },
+  { label: "Admission", href: "/admission" },
+  { label: "Academics", href: "/academics" },
+  { label: "Faculty", href: "/faculty" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
 ];

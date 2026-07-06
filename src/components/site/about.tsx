@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, Target, Eye, Award, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { SectionHeading } from "./section-heading";
 import { SITE } from "@/lib/store";
 
@@ -128,10 +129,10 @@ export function About() {
 
             <div className="mt-8">
               <Button asChild className="bg-brand hover:bg-brand-deep text-white group">
-                <a href="#departments">
-                  Explore Our Departments
+                <Link href="/about">
+                  Learn More About Us
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
+                </Link>
               </Button>
             </div>
           </div>

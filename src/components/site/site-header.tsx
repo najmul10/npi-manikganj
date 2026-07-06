@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X, GraduationCap, Phone, ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetClose } from "@/components/ui/sheet";
 import { NAV, SITE, useUI } from "@/lib/store";
@@ -10,7 +12,7 @@ import { cn } from "@/lib/utils";
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("#home");
+  const pathname = usePathname();
   const openAdmission = useUI((s) => s.openAdmission);
 
   useEffect(() => {
@@ -20,42 +22,24 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    const ids = NAV.map((n) => n.href.replace("#", ""));
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActive(`#${e.target.id}`);
-        });
-      },
-      { rootMargin: "-45% 0px -50% 0px" }
-    );
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) obs.observe(el);
-    });
-    return () => obs.disconnect();
-  }, []);
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(href + "/");
+  };
 
   return (
     <header
       className={cn(
         "sticky top-0 z-50 transition-all duration-300 bg-white",
-        scrolled
-          ? "shadow-md border-b border-border"
-          : "shadow-sm border-b border-border/60"
+        scrolled ? "shadow-md border-b border-border" : "shadow-sm border-b border-border/60"
       )}
     >
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group">
             <div className="relative h-12 w-12 rounded-full bg-white flex items-center justify-center ring-1 ring-border overflow-hidden shrink-0">
-              <img
-                src={SITE.logo}
-                alt="NPI Manikganj Logo"
-                className="h-full w-full object-contain"
-              />
+              <img src={SITE.logo} alt="NPI Manikganj Logo" className="h-full w-full object-contain" />
             </div>
             <div className="leading-tight">
               <div className="font-serif font-bold text-[18px] sm:text-[19px] text-foreground tracking-tight">
@@ -65,26 +49,24 @@ export function SiteHeader() {
                 National Polytechnic Institute
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-0.5">
             {NAV.map((n) => (
-              <a
+              <Link
                 key={n.href}
                 href={n.href}
                 className={cn(
                   "relative px-3.5 py-2 text-sm font-semibold rounded-md transition-colors",
-                  active === n.href
-                    ? "text-brand"
-                    : "text-foreground/80 hover:text-brand"
+                  isActive(n.href) ? "text-brand" : "text-foreground/80 hover:text-brand"
                 )}
               >
                 {n.label}
-                {active === n.href && (
+                {isActive(n.href) && (
                   <span className="absolute left-3.5 right-3.5 -bottom-px h-0.5 bg-gold rounded-full" />
                 )}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -135,13 +117,16 @@ export function SiteHeader() {
                 <nav className="flex flex-col p-3">
                   {NAV.map((n) => (
                     <SheetClose asChild key={n.href}>
-                      <a
+                      <Link
                         href={n.href}
-                        className="flex items-center justify-between px-3 py-3 rounded-lg text-[15px] font-semibold text-foreground/85 hover:bg-accent hover:text-brand transition-colors"
+                        className={cn(
+                          "flex items-center justify-between px-3 py-3 rounded-lg text-[15px] font-semibold transition-colors",
+                          isActive(n.href) ? "bg-brand/10 text-brand" : "text-foreground/85 hover:bg-accent hover:text-brand"
+                        )}
                       >
                         {n.label}
                         <ChevronDown className="h-4 w-4 -rotate-90 text-muted-foreground" />
-                      </a>
+                      </Link>
                     </SheetClose>
                   ))}
                 </nav>

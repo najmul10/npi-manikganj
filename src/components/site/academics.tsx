@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CalendarDays, FileText, GraduationCap, Headphones, ArrowUpRight, ClipboardList } from "lucide-react";
+import Link from "next/link";
 import { SectionHeading } from "./section-heading";
 import { NoticeBoard } from "./notice-board";
 import { ResultChecker } from "./result-checker";
@@ -38,24 +39,27 @@ export function Academics() {
               <h3 className="font-serif font-bold text-lg text-foreground mb-4">Quick Links</h3>
               <div className="grid sm:grid-cols-2 gap-3">
                 {QUICK.map((q, idx) => (
-                  <motion.a
+                  <motion.div
                     key={q.label}
-                    href="#contact"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.06 }}
-                    className="group rounded-xl border border-border p-3 hover:border-brand/40 hover:bg-brand/5 transition-colors"
                   >
-                    <div className="flex items-start justify-between">
-                      <div className="grid place-items-center h-9 w-9 rounded-lg bg-brand/10 text-brand">
-                        <q.icon className="h-4.5 w-4.5" />
+                    <Link
+                      href="/contact"
+                      className="group block rounded-xl border border-border p-3 hover:border-brand/40 hover:bg-brand/5 transition-colors"
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="grid place-items-center h-9 w-9 rounded-lg bg-brand/10 text-brand">
+                          <q.icon className="h-4.5 w-4.5" />
+                        </div>
+                        <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-brand transition-colors" />
                       </div>
-                      <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-brand transition-colors" />
-                    </div>
-                    <div className="mt-2 font-semibold text-sm text-foreground">{q.label}</div>
-                    <div className="text-[11px] text-muted-foreground">{q.desc}</div>
-                  </motion.a>
+                      <div className="mt-2 font-semibold text-sm text-foreground">{q.label}</div>
+                      <div className="text-[11px] text-muted-foreground">{q.desc}</div>
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
 
