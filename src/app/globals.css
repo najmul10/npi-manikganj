@@ -132,6 +132,7 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "ss01", "cv01";
+    overflow-x: hidden;
   }
   h1, h2, h3, h4, .font-serif {
     font-family: var(--font-playfair), Georgia, serif;
