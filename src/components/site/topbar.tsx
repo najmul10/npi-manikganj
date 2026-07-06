@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, Clock, Facebook, Youtube, Linkedin, MapPin } from "lucide-react";
+import { Mail, Phone, Clock, Facebook, MapPin } from "lucide-react";
 import { SITE } from "@/lib/store";
 
 export function Topbar() {
@@ -30,8 +30,6 @@ export function Topbar() {
           <span className="h-3 w-px bg-white/20" />
           <div className="flex items-center gap-2.5">
             <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-amber-300 transition-colors"><Facebook className="h-4 w-4" /></a>
-            <a href="#" aria-label="YouTube" className="hover:text-amber-300 transition-colors"><Youtube className="h-4 w-4" /></a>
-            <a href="#" aria-label="LinkedIn" className="hover:text-amber-300 transition-colors"><Linkedin className="h-4 w-4" /></a>
           </div>
         </div>
       </div>
