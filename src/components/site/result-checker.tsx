@@ -1,6 +1,6 @@
 "use client";
 
-import { GraduationCap, ExternalLink, ArrowRight, FileSearch, ShieldCheck } from "lucide-react";
+import { GraduationCap, ArrowRight, FileSearch, ShieldCheck, Clock } from "lucide-react";
 
 export function ResultChecker() {
   return (
@@ -17,10 +17,10 @@ export function ResultChecker() {
 
       <div className="p-6">
         <p className="text-sm text-foreground/80 leading-relaxed mb-5">
-          Check your Diploma in Engineering semester final results on our official result portal. Get instant access to BTEB published results with your roll number.
+          Check your Diploma in Engineering semester final results online. Get instant access to BTEB published results with your roll number.
         </p>
 
-        {/* Official Result Portal — primary CTA */}
+        {/* Result Portal — primary CTA */}
         <a
           href="https://diplomaresultbd.com"
           target="_blank"
@@ -32,7 +32,7 @@ export function ResultChecker() {
               <FileSearch className="h-6 w-6 text-white" />
             </div>
             <div>
-              <div className="font-serif font-bold text-base">Official Result Portal</div>
+              <div className="font-serif font-bold text-base">Check Your Result</div>
               <div className="text-xs text-white/85">diplomaresultbd.com — BTEB Diploma Results</div>
             </div>
           </div>
@@ -43,10 +43,10 @@ export function ResultChecker() {
         <div className="mt-4 grid grid-cols-2 gap-3">
           <div className="flex items-center gap-2 rounded-lg bg-secondary/60 px-3 py-2.5">
             <ShieldCheck className="h-4 w-4 text-brand shrink-0" />
-            <span className="text-xs font-medium text-foreground/75">BTEB Official Results</span>
+            <span className="text-xs font-medium text-foreground/75">BTEB Results</span>
           </div>
           <div className="flex items-center gap-2 rounded-lg bg-secondary/60 px-3 py-2.5">
-            <ExternalLink className="h-4 w-4 text-brand shrink-0" />
+            <Clock className="h-4 w-4 text-brand shrink-0" />
             <span className="text-xs font-medium text-foreground/75">Instant Access</span>
           </div>
         </div>
