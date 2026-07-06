@@ -15,7 +15,7 @@ const PROCESS = [
 
 const REQUIREMENTS = [
   "SSC / Equivalent examination passed (any group)",
-  "Minimum GPA 3.50 (varies by department & seat availability)",
+  "Minimum GPA 2.00 (varies by department & seat availability)",
   "Original SSC transcript & marksheet",
   "4 copies passport-size photographs",
   "National ID / Birth certificate copy",
@@ -25,7 +25,7 @@ const REQUIREMENTS = [
 const FAQS = [
   {
     q: "What is the eligibility for Diploma in Engineering admission?",
-    a: "Students who have passed SSC/equivalent examination from any recognized board with a minimum GPA (typically 3.50, varies by department) are eligible to apply for the 4-year Diploma in Engineering program.",
+    a: "Students who have passed SSC/equivalent examination from any recognized board with a minimum GPA (typically 2.00, varies by department) are eligible to apply for the 4-year Diploma in Engineering program.",
   },
   {
     q: "How long is the Diploma in Engineering program?",
