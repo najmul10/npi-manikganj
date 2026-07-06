@@ -26,18 +26,18 @@ export function Academics() {
           subtitle="Stay updated with the latest notices, check your exam results online, and access all student services in one place."
         />
 
-        <div className="mt-12 grid lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+        <div className="mt-10 sm:mt-12 grid lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 items-start">
           <div className="lg:col-span-2">
             <NoticeBoard />
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-5 sm:space-y-6">
             <ResultChecker />
 
             {/* Quick links */}
-            <div className="rounded-3xl bg-card border border-border p-6 shadow-sm">
+            <div className="rounded-3xl bg-card border border-border p-5 sm:p-6 shadow-sm">
               <h3 className="font-serif font-bold text-lg text-foreground mb-4">Quick Links</h3>
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
                 {QUICK.map((q, idx) => (
                   <motion.div
                     key={q.label}
@@ -48,7 +48,7 @@ export function Academics() {
                   >
                     <Link
                       href="/contact"
-                      className="group block rounded-xl border border-border p-3 hover:border-brand/40 hover:bg-brand/5 transition-colors"
+                      className="group block rounded-xl border border-border p-3 hover:border-brand/40 hover:bg-brand/5 transition-colors h-full"
                     >
                       <div className="flex items-start justify-between">
                         <div className="grid place-items-center h-9 w-9 rounded-lg bg-brand/10 text-brand">

@@ -41,24 +41,24 @@ export function NoticeBoard() {
 
   return (
     <div className="rounded-3xl bg-card border border-border overflow-hidden shadow-sm">
-      <div className="flex items-center gap-3 px-6 py-4 border-b border-border bg-brand-gradient text-white">
-        <div className="grid place-items-center h-10 w-10 rounded-xl bg-white/15">
+      <div className="flex items-center gap-3 px-4 sm:px-6 py-4 border-b border-border bg-brand-gradient text-white">
+        <div className="grid place-items-center h-10 w-10 rounded-xl bg-white/15 shrink-0">
           <Megaphone className="h-5 w-5 text-red-400" />
         </div>
-        <div>
-          <h3 className="font-serif font-bold text-lg">Notice Board</h3>
+        <div className="min-w-0">
+          <h3 className="font-serif font-bold text-base sm:text-lg">Notice Board</h3>
           <p className="text-xs text-white/70">All notices & office orders</p>
         </div>
       </div>
 
       {/* Category tabs */}
-      <div className="flex gap-2 px-5 py-3 border-b border-border overflow-x-auto no-scrollbar">
+      <div className="flex gap-1.5 sm:gap-2 px-3 sm:px-5 py-3 border-b border-border overflow-x-auto no-scrollbar">
         {CATS.map((c) => (
           <button
             key={c}
             onClick={() => setCat(c)}
             className={cn(
-              "shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold transition-colors",
+              "shrink-0 px-2.5 sm:px-3 py-1.5 rounded-full text-xs font-semibold transition-colors",
               cat === c
                 ? "bg-brand text-white"
                 : "bg-secondary text-foreground/70 hover:bg-brand/10 hover:text-brand"
@@ -85,7 +85,7 @@ export function NoticeBoard() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: Math.min(idx * 0.04, 0.3) }}
                 onClick={() => setActive(n)}
-                className="group w-full text-left px-5 py-4 hover:bg-secondary/60 transition-colors flex gap-3"
+                className="group w-full text-left px-4 sm:px-5 py-3.5 sm:py-4 hover:bg-secondary/60 transition-colors flex gap-3"
               >
                 <div className="shrink-0 w-12 text-center">
                   <div className="rounded-lg bg-brand/8 text-brand py-1.5">
